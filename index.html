@@ -454,6 +454,79 @@ pages.systems = function(){
   </div>`;
 };
 
+pages.ai = function(){
+  const p1 = ['動態派車建議','路線最佳化','ETA 預估','裝載率分析','異常預警','車隉績效分析'];
+  const p2 = ['動態運價建議','貨主需求預測','信用風險模型','客服 AI Agent','商家物流颇問 Agent','對帳與合約審核自動化'];
+  const maturity = [{n:'動態派車',a:80,b:95},{n:'路線優化',a:70,b:90},{n:'ETA預估',a:75,b:92},{n:'運價建議',a:20,b:75},{n:'需求預測',a:15,b:70},{n:'風控模型',a:10,b:65},{n:'AI Agent',a:5,b:60}];
+  return `
+    <div class="grid-2">
+      ${card('🤖 Phase 1 — AI 導入重點',['效率優先','tag-blue'],`<p style="font-size:.78rem;color:var(--text-sec);margin-bottom:10px">先用於可直接改善履約效率與毛利結構的場景</p>${p1.map((t,i)=>checkItem(i+1,t,'','var(--accent)')).join('')}`,'border-top:4px solid var(--accent)')}
+      ${card('🧠 Phase 2 — AI 進階應用',['數據驅動','tag-purple'],`<p style="font-size:.78rem;color:var(--text-sec);margin-bottom:10px">待資料累積後逐步發展</p>${p2.map((t,i)=>checkItem(i+1,t,'','var(--purple)')).join('')}`,'border-top:4px solid var(--purple)')}
+    </div>
+    ${card('📊 AI 能力成熟度模型',null,`<table><thead><tr><th>AI 能力</th><th>Phase 1 成熟度</th><th>Phase 2 目標</th></tr></thead><tbody>${maturity.map(m=>`<tr><td style="font-weight:500">${m.n}</td><td><div class="progress-bar" style="width:140px;display:inline-block;vertical-align:middle"><div class="progress-fill" style="width:${m.a}%;background:var(--accent)"></div></div> ${m.a}%</td><td><div class="progress-bar" style="width:140px;display:inline-block;vertical-align:middle"><div class="progress-fill" style="width:${m.b}%;background:var(--purple)"></div></div> ${m.b}%</td></tr>`).join('')}</tbody></table>`)}
+  `;
+};
+
+pages.pmo = function(){
+  const kanban = {
+    'Backlog':{c:'#94a3b8',items:[{t:'AI 客服 Agent 設計',tags:['AI','客服'],p:'中'},{t:'商家物流顧問 Agent',tags:['AI','商家'],p:'低'},{t:'對帳自動化模組',tags:['財務'],p:'中'}]},
+    '待辦':{c:'#3b82f6',items:[{t:'MOMO 訂單 API 串接規格',tags:['技術','整合'],p:'高'},{t:'貨件服務規則引擎設計',tags:['核心','產品'],p:'高'},{t:'車隊端 App UI/UX 設計',tags:['前端'],p:'中'}]},
+    '進行中':{c:'#f59e0b',items:[{t:'現有系統盤點',tags:['資訊'],p:'高'},{t:'PMO 組織架構確認',tags:['管理'],p:'高'}]},
+    '已完成':{c:'#10b981',items:[{t:'商業計畫書 V2 完成',tags:['策略'],p:'高'},{t:'開發模式評估報告',tags:['技術'],p:'高'}]},
+  };
+  const roles = [
+    {r:'平台總負責人',d:'總經理室',ts:['戰略方向決策','資源調度','跨部門協調']},
+    {r:'商務負責人',d:'商務部',ts:['貨主拓展','車隊合作','生態系發展']},
+    {r:'產品負責人',d:'產品部',ts:['產品藍圖','規則引擎設計','UX策略']},
+    {r:'技術負責人',d:'資訊部',ts:['架構設計','系統整合','核心開發']},
+    {r:'營運負責人',d:'營運部',ts:['履約管理','KPI監控','流程優化']},
+    {r:'AI 負責人',d:'AI團隊',ts:['模型開發','數據策略','智慧應用']},
+  ];
+  return `
+    ${card('📋 看板管理',null,`<div class="kanban">${Object.entries(kanban).map(([name,col])=>`<div class="kanban-col"><div class="kanban-col-title"><span style="width:8px;height:8px;border-radius:50%;background:${col.c}"></span>${name}<span style="margin-left:auto;font-size:.7rem;color:var(--text-muted)">${col.items.length}</span></div>${col.items.map(c=>`<div class="kanban-card"><h5>${c.t}</h5><div class="tags">${c.tags.map(tg=>`<span class="tag tag-blue">${tg}</span>`).join('')}<span class="tag ${c.p==='高'?'tag-red':c.p==='中'?'tag-yellow':'tag-green'}" style="margin-left:auto">${c.p}</span></div></div>`).join('')}</div>`).join('')}</div>`)}
+    ${card('🏢 PMO 組織架構',null,`<div class="grid-3" style="gap:10px">${roles.map(r=>`<div class="stat-card" style="border-top:3px solid var(--accent)"><div style="font-weight:700;font-size:.88rem">${r.r}</div><div style="font-size:.7rem;color:var(--accent);margin-bottom:6px">${r.d}</div>${r.ts.map(t=>`<div style="font-size:.76rem;color:var(--text-sec);padding:2px 0">• ${t}</div>`).join('')}</div>`).join('')}</div>`)}
+  `;
+};
+
+pages.roadmap = function(){
+  const phases = [
+    {p:1,t:'基礎建設期',period:'0-3 個月',c:'#3b82f6',tasks:[
+      ['成立平台事業 PMO','總經理室'],['現有系統與資料完整盤點','資訊部'],['核心/周邊能力定義','PMO'],['專車與棧板系統可用性評估','營運部'],['MVP範圍與技術藍圖確認','技術長'],['合作夥伴評估與分工確認','商務部'],['貨件服務規則模型設計','產品部'],['主資料模型設計','資訊部']]},
+    {p:2,t:'MVP 建置期',period:'4-6 個月',c:'#10b981',tasks:[
+      ['平台 MVP 開發啟動','開發團隊'],['第三地出貨試點場景上線','營運部'],['S90/1.9噸/3.5噸配送模組','產品部'],['基本下單→派車→追蹤→對帳閉環','開發團隊'],['整合既有專車/棧板系統','資訊部'],['貨主端與車隊端前台上線','UI/UX'],['基礎 API Gateway 建置','架構師']]},
+    {p:3,t:'優化擴張期',period:'7-12 個月',c:'#f59e0b',tasks:[
+      ['規則引擎優化與自動化','產品部'],['合作車隊擴大招募','商務部'],['AI 路線最佳化導入','AI團隊'],['AI 動態派車建議上線','AI團隊'],['外部貨主拓展計畫','業務部'],['數據中台第一階段上線','資訊部'],['KPI即時兠表板上線','營運部'],['逐步內化關鍵邏輯','技術長']]},
+    {p:4,t:'生態系發展期',period:'13-24 個月',c:'#8b5cf6',tasks:[
+      ['外部貨主規模化拓展','業務部'],['資料中台強化與AI預測','AI團隊'],['保險服務生態系導入','商務部'],['維修保養合作平台','營運部'],['供應釈金融試點','財務部'],['車輛採購合作模組','採購部'],['車隊管理 SaaS 模組','產品部'],['經營兠表板與投資決策依據','PMO']]},
+  ];
+  return phases.map(ph=>`<div class="card" style="border-left:4px solid ${ph.c}">
+    <div class="card-hdr"><span class="card-title"><span class="tag" style="background:${ph.c}22;color:${ph.c}">Phase ${ph.p}</span> ${ph.t}</span><span class="tag tag-blue">${ph.period}</span></div>
+    <div class="grid-2">${ph.tasks.map((t,j)=>checkItem(j+1,t[0],t[1],'#94a3b8')).join('')}</div>
+  </div>`).join('');
+};
+
+pages.kpi = function(){
+  const kpis = [
+    {n:'平台化訂單占比',c:50,t:65,u:'%'},{n:'活躍貨主數',c:85,t:200,u:'家'},
+    {n:'活躍車隊/司機',c:180,t:500,u:'人'},{n:'準時率',c:94.5,t:98,u:'%'},
+    {n:'異常率',c:4.8,t:2,u:'%',inv:1},{n:'每單毛利',c:22,t:35,u:'NTD'},
+    {n:'平台GMV',c:18,t:50,u:'M/月'},{n:'生態系收入占比',c:2,t:15,u:'%'},
+  ];
+  const orderData = [{l:'1月',v:12},{l:'3月',v:15},{l:'5月',v:21},{l:'7月',v:27},{l:'9月',v:34},{l:'12月',v:48}];
+  const vehicleData = [{l:'1月',v:12},{l:'3月',v:15},{l:'5月',v:18},{l:'7月',v:22},{l:'9月',v:27},{l:'12月',v:39}];
+
+  return `<div class="grid-4" style="margin-bottom:18px">${kpis.map(k=>{
+    const pct = k.inv? Math.min(100,Math.round(k.t/k.c*100)):Math.min(100,Math.round(k.c/k.t*100));
+    const clr = pct>=80?'var(--success)':pct>=50?'var(--warning)':'var(--danger)';
+    return `<div class="stat-card"><div class="stat-label">${k.n}</div><div class="stat-value" style="font-size:1.35rem;color:${clr}">${k.c}${k.u}</div><div style="font-size:.7rem;color:var(--text-muted);margin-bottom:6px">目標：${k.t}${k.u}</div><div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:${clr}"></div></div><div style="font-size:.68rem;color:var(--text-muted);margin-top:3px;text-align:right">${pct}%</div></div>`;
+  }).join('')}</div>
+  <div class="grid-2">
+    ${card('📊 訂單成長趨勢（千單/月）',null,makeBar(orderData,50,'var(--accent)'))}
+    ${card('🚛 活躍車輛數趨勢（十台）',null,makeBar(vehicleData,42,'var(--success)'))}
+  </div>`;
+};
+
+
 pages.team = function(){
   const t = subTabs.team||0;
   let content = '';
