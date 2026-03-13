@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>å¯ææºæ§ç©æµå¹³å° | çéæ¨ååä½ä¸­å¿</title>
+<title>富昇智慧物流平台 | 營運推動協作中心</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
 :root {
@@ -126,17 +126,17 @@ tr:hover td{background:#f8fafc}
 
 <div class="sidebar">
   <div class="sidebar-brand">
-    <h1>å¯ææºæ§ç©æµ</h1>
-    <div class="sub">çéæ¨ååä½ä¸­å¿</div>
+    <h1>富昇智慧物流</h1>
+    <div class="sub">營運推動協作中心</div>
   </div>
   <nav class="sidebar-nav" id="sidebarNav"></nav>
 </div>
 
 <div class="main">
   <div class="header">
-    <h2 id="headerTitle">ð ç¸½è¦½åè¡¨æ¿</h2>
+    <h2 id="headerTitle">📊 總覽儀表板</h2>
     <div style="display:flex;align-items:center;gap:14px">
-      <span class="phase-badge">Phase 1: åºç¤å»ºè¨­æ</span>
+      <span class="phase-badge">Phase 1: 基礎建設期</span>
       <span style="font-size:.78rem;color:var(--text-sec)">2026 Q1-Q2</span>
     </div>
   </div>
@@ -146,27 +146,27 @@ tr:hover td{background:#f8fafc}
 <script>
 // ====== NAV DATA ======
 const NAV = [
-  {section:'ç¸½è¦½', items:[
-    {id:'dashboard',icon:'ð',label:'ç¸½è¦½åè¡¨æ¿'}
+  {section:'總覽', items:[
+    {id:'dashboard',icon:'📊',label:'總覽儀表板'}
   ]},
-  {section:'ååé å', items:[
-    {id:'vision',icon:'ð¯',label:'æ°ç¥é¡æ¯',badge:'NEW'},
-    {id:'market',icon:'ð',label:'å¸å ´æ©æ'},
-    {id:'customers',icon:'ð¥',label:'ç®æ¨å®¢æ¶ç­ç¥'},
-    {id:'services',icon:'ð¦',label:'æåç©é£'},
-    {id:'revenue',icon:'ð°',label:'ååæ¨¡å¼èç²å©'},
+  {section:'商務領域', items:[
+    {id:'vision',icon:'🎯',label:'戰略願景',badge:'NEW'},
+    {id:'market',icon:'🌐',label:'市場機會'},
+    {id:'customers',icon:'👥',label:'目標客戶策略'},
+    {id:'services',icon:'📦',label:'服務矩陣'},
+    {id:'revenue',icon:'💰',label:'商務模式與獲利'},
   ]},
-  {section:'æè¡å¹³å°', items:[
-    {id:'architecture',icon:'ðï¸',label:'å¹³å°æè¡æ¶æ§'},
-    {id:'devmode',icon:'âï¸',label:'éç¼æ¨¡å¼è©ä¼°'},
-    {id:'systems',icon:'ð§',label:'ç³»çµ±ç¤é»èæ´å'},
-    {id:'ai',icon:'ð¤',label:'AI æºæ§æç¨'},
+  {section:'技術平台', items:[
+    {id:'architecture',icon:'🏗️',label:'平台技術架構'},
+    {id:'devmode',icon:'⚙️',label:'開發模式評估'},
+    {id:'systems',icon:'🔧',label:'系統盤點與整合'},
+    {id:'ai',icon:'🤖',label:'AI 智慧應用'},
   ]},
-  {section:'å°æ¡ç®¡ç', items:[
-    {id:'pmo',icon:'ð',label:'PMO å°æ¡ç®¡ç'},
-    {id:'roadmap',icon:'ðºï¸',label:'äºå¹´è·¯ç·å'},
-    {id:'kpi',icon:'ð',label:'KPI è¿½è¹¤'},
-    {id:'team',icon:'ð¤',label:'åéåä½'},
+  {section:'專案管理', items:[
+    {id:'pmo',icon:'📋',label:'PMO 專案管理'},
+    {id:'roadmap',icon:'🗺️',label:'二年路線圖'},
+    {id:'kpi',icon:'📈',label:'KPI 追蹤'},
+    {id:'team',icon:'🤝',label:'團隊協作'},
   ]},
 ];
 
@@ -226,12 +226,12 @@ function setSubTab(id,idx){ subTabs[id]=idx; renderPage(currentView); }
 const pages = {};
 
 pages.dashboard = function(){
-  const barData = [{l:'1æ',v:12},{l:'2æ',v:14},{l:'3æ',v:15},{l:'4æ',v:18},{l:'5æ',v:21},{l:'6æ',v:23},{l:'7æ',v:27},{l:'8æ',v:30},{l:'9æ',v:34},{l:'10æ',v:39},{l:'11æ',v:43},{l:'12æ',v:48}];
+  const barData = [{l:'1月',v:12},{l:'2月',v:14},{l:'3月',v:15},{l:'4月',v:18},{l:'5月',v:21},{l:'6月',v:23},{l:'7月',v:27},{l:'8月',v:30},{l:'9月',v:34},{l:'10月',v:39},{l:'11月',v:43},{l:'12月',v:48}];
 
   const kpis = [
-    {n:'å¹³å°åè¨å®å æ¯',c:50,t:65,u:'%'},{n:'æ´»èºè²¨ä¸»æ¸',c:85,t:200,u:'å®¶'},
-    {n:'æ´»èºè»é/å¸æ©',c:180,t:500,u:'äºº'},{n:'æºæç',c:94.5,t:98,u:'%'},
-    {n:'ç°å¸¸ç',c:4.8,t:2,u:'%',inv:1},{n:'æ¯å®æ¯å©',c:22,t:35,u:'NTD'}
+    {n:'平台化訂單占比',c:50,t:65,u:'%'},{n:'活躍貨主數',c:85,t:200,u:'家'},
+    {n:'活躍車隊/司機',c:180,t:500,u:'人'},{n:'準時率',c:94.5,t:98,u:'%'},
+    {n:'異常率',c:4.8,t:2,u:'%',inv:1},{n:'每單毛利',c:22,t:35,u:'NTD'}
   ];
 
   let kpiHtml = kpis.slice(0,5).map(k=>{
@@ -241,68 +241,68 @@ pages.dashboard = function(){
   }).join('');
 
   const tasks = [
-    ['æç«å¹³å°äºæ¥­ PMO','ç¸½ç¶çå®¤'],['ç¾æç³»çµ±èè³æå®æ´ç¤é»','è³è¨é¨'],
-    ['æ ¸å¿/å¨éè½åå®ç¾©','PMO'],['å°è»èæ£§æ¿ç³»çµ±å¯ç¨æ§è©ä¼°','çéé¨'],
-    ['MVPç¯åèæè¡èåç¢ºèª','æè¡é·'],['åä½å¤¥ä¼´è©ä¼°èåå·¥ç¢ºèª','ååé¨']
+    ['成立平台事業 PMO','總經理室'],['現有系統與資料完整盤點','資訊部'],
+    ['核心/周邂能力定義','PMO'],['專車與棧板系統可用性評估','營運部'],
+    ['MVP範圍與技術藍圖確認','技術長'],['合作夥伴評估與分工確認','商務部']
   ];
 
   return `
     <div class="hero">
-      <h1>å¯ææºæ§ç©æµå¹³å°èéè½äº¤ææ</h1>
-      <p>ä·¥ MOMO å ´æ¯çºèµ·é»ï¼æ¨åè»è²¨å¹éãæºæ§èª¿åº¦èç©æµçæç³»ç¼å±ä¹äºå¹´åæ¥­è¨ç«ãå¾å³çµ±ééå·è¡è§è²ï¼åç´çºå¹³å°åç©æµç§æå¬å¸ã</p>
+      <h1>富昇智慧物流平台與運能交易所</h1>
+      <p>䷥ MOMO 場景為起點，推動車貨匹配、智慧調度與物流生態系發展之二年商業計畫。從傳統配送執行角色，升級為平台型物流科技公司。</p>
       <div class="evolution">
-        <span class="evo-step" style="background:rgba(59,130,246,.2);color:#93c5fd">ä¼æ¥­ç©æµ</span><span class="evo-arrow">â</span>
-        <span class="evo-step" style="background:rgba(16,185,129,.2);color:#6ee7b7">ç©æµä¼æ¥­</span><span class="evo-arrow">â</span>
-        <span class="evo-step" style="background:rgba(245,158,11,.2);color:#fcd34d">ç©æµå¹³å°</span><span class="evo-arrow">â</span>
-        <span class="evo-step" style="background:rgba(139,92,246,.2);color:#c4b5fd">æºæ§ç©æµçæç³»</span>
+        <span class="evo-step" style="background:rgba(59,130,246,.2);color:#93c5fd">企業物流</span><span class="evo-arrow">→</span>
+        <span class="evo-step" style="background:rgba(16,185,129,.2);color:#6ee7b7">物流企業</span><span class="evo-arrow">→</span>
+        <span class="evo-step" style="background:rgba(245,158,11,.2);color:#fcd34d">物流平台</span><span class="evo-arrow">→</span>
+        <span class="evo-step" style="background:rgba(139,92,246,.2);color:#c4b5fd">智慧物流生態系</span>
       </div>
     </div>
     <div class="grid-4" style="margin-bottom:18px">
-      ${statCard('MOMO ééè¦èç','50%','var(--accent)','â ç®æ¨ 65%')}
-      ${statCard('ç¬¬ä¸å°åºè²¨è¦èç','95%','var(--success)','å°åè¦èç¯å')}
-      ${statCard('æ¯æ¥ S90 è²¨ä»¶é','60è¬','var(--orange)','å°ç£å¸å ´ç¸½é')}
-      ${statCard('å°æ¡é²åº¦','Phase 1','var(--purple)','åºç¤å»ºè¨­æ')}
+      ${statCard('MOMO 配送覆蓋率','50%','var(--accent)','↑ 目標 65%')}
+      ${statCard('第三地出貨覆蓋率','95%','var(--success)','地址覆蓋範圍')}
+      ${statCard('每日 S90 貨件量','60萬','var(--orange)','台灣市場總量')}
+      ${statCard('專案進度','Phase 1','var(--purple)','基礎建設期')}
     </div>
     <div class="grid-2">
-      ${card('ð çéè¨å®æé·é ä¼°ï¼åå®/æï¼',['äºå¹´è¦å','tag-blue'],makeBar(barData,50,'var(--accent)'))}
-      ${card('ð¯ KPI éæçæ',null,kpiHtml)}
+      ${card('📈 營運訂單成長預估（千單/月）',['二年規劃','tag-blue'],makeBar(barData,50,'var(--accent)'))}
+      ${card('🎯 KPI 達成狀態',null,kpiHtml)}
     </div>
-    ${card('ð Phase 1 ééµä»»å',null,`<div class="grid-3">${tasks.map((t,i)=>checkItem(i+1,t[0],t[1],'#94a3b8')).join('')}</div>`)}
+    ${card('🏃 Phase 1 關鍵任務',null,`<div class="grid-3">${tasks.map((t,i)=>checkItem(i+1,t[0],t[1],'#94a3b8')).join('')}</div>`)}
   `;
 };
 
 pages.vision = function(){
   const pillars = [
-    ['ð','å¯äº¤æçéè½å¹³å°','å»ºç«éè½ä¾éæ®åå¸å ´ï¼è®è»éèè²¨ä¸»é«æå°æ¥','#3b82f6'],
-    ['ð','å¯è¦ååçééæå','S90/1.9å¸/3.5¯/å°è»/æ£§æ¿åææ¨æºåæåè¦å','#10b981'],
-    ['ðï¸','å¯è¦åçç©æµç®¡çä¸­æ¨','å¨ç¨å¯è¿½è¹¤ãå¯åæãå¯é è­¦ççéå¹³å°','#f59e0b'],
-    ['ð','å¯ç´¯ç©æ¸æçæºæ§æ±ºç­åºåº§','æ¯ç­äº¤ææ¢¹æ¾±æ¸æï¼é©åAIé æ¸¬èåªå','#8b5cf6'],
-    ['ð±','å¯å»¶ä¼¸ççæç³»æåå¹³å°','ä¿éªãç¶­ä¿®ãéèãSaaSç­é«éå å¹å¼æå','#06b6d4'],
+    ['🔄','可交易的運能平台','建立運能供需撮合市場，讓車隊與貨主高效對接','#3b82f6'],
+    ['📐','可規則化的配送服務','S90/1.9噸/3.5���/專車/棧板各有標準化服務規則','#10b981'],
+    ['👁️','可視化的物流管理中樞','全程可追蹤、可分析、可預警的營運平台','#f59e0b'],
+    ['📊','可累積數據的智慧決策底座','每筆交昑梹澱數據，驅動AI預測與優化','#8b5cf6'],
+    ['🌱','可延伸的生態系服務平台','保險、維修、金融、SaaS等高附加價值服務','#06b6d4'],
   ];
-  const advantages = ['MOMOå¹³å°èç¬¬ä¸å°åºè²¨ççå¯¦å ´æ¯','æ¢æééèå±¥ç´æµç¨','çå¯¦åå®¶èä¾æåæ¥è§¸é»','ç¶²ç«ãåºè²¨å®èééæåæµç¨å¯å°æµ','åç±å§é¨éç°é©è­ï¼åå¤æ´å¸å ´','ç±å±¥ç´ä¸­æ¨åç´çºéè½äº¤æå¹³å°'];
+  const advantages = ['MOMO平台與第三地出貨的真實場景','既有配送與履約流程','真實商家與供應商接觸點','網站、出貨單與配送服務流程可導流','先由內部閉環驗證，再外擴市場','由履約中樞升級為運能交易平台'];
   return `
     <div class="card" style="border-left:4px solid var(--accent)">
-      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:6px">æ°ç¥å®ä½</h3>
-      <p style="font-size:.92rem;color:var(--text-sec);line-height:1.8;margin-bottom:14px">æ´å S90 å°ä»¶ã1.9å¸è3.5å¸ééãç¬¬ä¸å°åºè²¨ãå°è»ãæ£§æ¿èå¤é¨åä½è»éç<strong>æºæ§ç©æµå¹³å°èéè½äº¤ææ</strong>ã</p>
+      <h3 style="font-size:1.25rem;font-weight:700;margin-bottom:6px">戰略定位</h3>
+      <p style="font-size:.92rem;color:var(--text-sec);line-height:1.8;margin-bottom:14px">整合 S90 小件、1.9噸與3.5噸配送、第三地出貨、專車、棧板與外部合作車隊的<strong>智慧物流平台與運能交易所</strong>。</p>
       <div class="evolution">
-        <span class="evo-step" style="background:#dbeafe;color:#1e40af">ä¼æ¥­ç©æµ</span><span class="evo-arrow" style="color:var(--text-muted)">â</span>
-        <span class="evo-step" style="background:#d1fae5;color:#065f46">ç©æµä¼æ¥­</span><span class="evo-arrow" style="color:var(--text-muted)">â</span>
-        <span class="evo-step" style="background:#fef3c7;color:#92400e">ç©æµå¹³å°</span><span class="evo-arrow" style="color:var(--text-muted)">â</span>
-        <span class="evo-step" style="background:#ede9fe;color:#5b21b6">æºæ§ç©æµçæç³»</span>
+        <span class="evo-step" style="background:#dbeafe;color:#1e40af">企業物流</span><span class="evo-arrow" style="color:var(--text-muted)">→</span>
+        <span class="evo-step" style="background:#d1fae5;color:#065f46">物流企業</span><span class="evo-arrow" style="color:var(--text-muted)">→</span>
+        <span class="evo-step" style="background:#fef3c7;color:#92400e">物流平台</span><span class="evo-arrow" style="color:var(--text-muted)">→</span>
+        <span class="evo-step" style="background:#ede9fe;color:#5b21b6">智慧物流生態系</span>
       </div>
     </div>
-    ${card('ðï¸ äºå¤§æ°ç¥æ¯æ±',null,`<div class="grid-3" style="gap:14px">${pillars.map(p=>`<div class="stat-card" style="border-top:3px solid ${p[3]}"><div style="font-size:1.4rem;margin-bottom:6px">${p[0]}</div><div style="font-weight:600;font-size:.88rem;margin-bottom:5px">${p[1]}</div><div style="font-size:.76rem;color:var(--text-sec);line-height:1.5">${p[2]}</div></div>`).join('')}</div>`)}
+    ${card('🏗️ 五大戰略支柱',null,`<div class="grid-3" style="gap:14px">${pillars.map(p=>`<div class="stat-card" style="border-top:3px solid ${p[3]}"><div style="font-size:1.4rem;margin-bottom:6px">${p[0]}</div><div style="font-weight:600;font-size:.88rem;margin-bottom:5px">${p[1]}</div><div style="font-size:.76rem;color:var(--text-sec);line-height:1.5">${p[2]}</div></div>`).join('')}</div>`)}
     <div class="grid-2">
-      ${card('ðª å¯æåå¤©å©åº',null,advantages.map((a,i)=>checkItem('â',a,'','var(--success)')).join(''))}
-      ${card('ð éè½çµæ§',null,`
-        <div style="margin-bottom:14px"><div style="font-weight:600;font-size:.84rem;margin-bottom:6px;color:var(--accent)">èªæä¸»åéè½</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ 1.9 å¸è» â ååéé/åå®¶åºè²¨/åå¸éé</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ 3.5 å¸è» â è¼é«è¼é/ç¹å®è·¯ç·éé</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ æ©è» â S90å°ä»¶/å³æéé/ç­éè£è²¨</div></div>
-        <div><div style="font-weight:600;font-size:.84rem;margin-bottom:6px;color:var(--success)">å¤é¨åä½éè½</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ å°è»</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ æ£§æ¿éé</div>
-        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">â¢ ç¹æ®éè¼¸è»åèåä½è»é</div></div>
+      ${card('💪 富昇先天利基',null,advantages.map((a,i)=>checkItem('✓',a,'','var(--success)')).join(''))}
+      ${card('🚛 運能結構',null,`
+        <div style="margin-bottom:14px"><div style="font-weight:600;font-size:.84rem;margin-bottom:6px;color:var(--accent)">自有主力運能</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 1.9 噸車 — 區域配送/商家出貨/城市配送</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 3.5 噸車 — 較高載重/特定路線配送</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 機車 — S90小件/即時配送/短鏈補貨</div></div>
+        <div><div style="font-weight:600;font-size:.84rem;margin-bottom:6px;color:var(--success)">外部合作運能</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 專車</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 棧板配送</div>
+        <div style="font-size:.8rem;color:var(--text-sec);padding:3px 0">• 特殊運輸車型與合作車隊</div></div>
       `)}
     </div>
   `;
@@ -310,52 +310,52 @@ pages.vision = function(){
 
 pages.market = function(){
   const pains = [
-    ['ð','è³è¨åæ£','è²¨æ¾è»ãè»æ¾è²¨è³è¨é«åº¦ç¢çåï¼ç¼ºä¹çµ±ä¸å¹³å°'],
-    ['ð¤','äººå·¥ä¾è³´','å ±å¹ãæ´¾è»ãè¿½è¹¤èå°å¸³é«åº¦ä¾è³´äººå·¥ä½æ¥­'],
-    ['ð±','æ¸ä½ç¼ºå£','ä¸­å°åè»éç¼ºä¹æ¸ä½å·¥å·èæ¨æºåæµç¨'],
-    ['ð','å ´æ¯æ·è£','S90å°ä»¶ãååééãå°è»æ£§æ¿éå½¼æ­¤æ·è£'],
-    ['ð','æ¸æèæ¼ ','ç©æµäº¤ææ¸æé£ä»¥æ²æ¾±ï¼éå¶AIèéèæåç¼å±'],
-    ['ðª','è²¨ä¸»ç¼ºé¸æ','ç¼ºå°å¯è¦åãå¯æ¯è¼ãå¯è¿½è¹¤çç·ä¸éè½æ¡è³¼å¹³å°'],
+    ['🔍','資訊分散','貨找車、車找貨資訊高度碎片化，缺乏統一平台'],
+    ['👤','人工依賴','報價、派車、追蹤與對帳高度依賴人工作業'],
+    ['📱','數位缺口','中小型車隊缺乏數位工具與標準化流程'],
+    ['🔗','場景斷裂','S90小件、區域配送、專車棧板間彼此斷裂'],
+    ['📊','數據荒漠','物流交易數據難以沉澱，限制AI與金融服務發展'],
+    ['🏪','貨主缺選擇','缺少可視化、可比較、可追蹤的線上運能採購平台'],
   ];
   return `
-    ${card('â¡ å¸å ´çµæ§çé»',null,`<div class="grid-2">${pains.map(p=>`<div style="display:flex;gap:11px;padding:11px 0;border-bottom:1px solid #f1f5f9"><span style="font-size:1.4rem">${p[0]}</span><div><div style="font-weight:600;font-size:.86rem">${p[1]}</div><div style="font-size:.76rem;color:var(--text-sec)">${p[2]}</div></div></div>`).join('')}</div>`,'border-left:4px solid var(--warning)')}
+    ${card('⚡ 市場結構痛點',null,`<div class="grid-2">${pains.map(p=>`<div style="display:flex;gap:11px;padding:11px 0;border-bottom:1px solid #f1f5f9"><span style="font-size:1.4rem">${p[0]}</span><div><div style="font-weight:600;font-size:.86rem">${p[1]}</div><div style="font-size:.76rem;color:var(--text-sec)">${p[2]}</div></div></div>`).join('')}</div>`,'border-left:4px solid var(--warning)')}
     <div class="grid-3">
-      ${statCard('å°ç£æ¯æ¥ S90 è²¨ä»¶','60è¬ä»¶','var(--accent)','é«é »æ¨æºåééå¸å ´','text-align:center;border-top:3px solid var(--accent)')}
-      ${statCard('ç¬¬ä¸å°åºè²¨è¦è','95%','var(--success)','MOMOè¨å®å°åè¦è','text-align:center;border-top:3px solid var(--success)')}
-      ${statCard('MOMO ééç®æ¨','65%','var(--orange)','éåç®æ¨ééå æ¯','text-align:center;border-top:3px solid var(--orange)')}
+      ${statCard('台灣每日 S90 貨件','60萬件','var(--accent)','高頻標準化配送市場','text-align:center;border-top:3px solid var(--accent)')}
+      ${statCard('第三地出貨覆蓋','95%','var(--success)','MOMO訂單地址覆蓋','text-align:center;border-top:3px solid var(--success)')}
+      ${statCard('MOMO 配送目標','65%','var(--orange)','集團目標配送占比','text-align:center;border-top:3px solid var(--orange)')}
     </div>
-    ${card('ð¦ è²¨ä»¶å¸å ´åå±¤',null,`<table><thead><tr><th>åå±¤</th><th>è²¨ä»¶é¡å</th><th>é©ç¨è»å</th><th>å¸å ´ç¹å¾µ</th></tr></thead><tbody>
-      <tr><td><span class="tag tag-cyan">å°å</span></td><td>S90ä»¥ä¸/é»åå°ä»¶/å³æéé</td><td>æ©è»</td><td>é«é »ãæ¨æºåãéå¤§</td></tr>
-      <tr><td><span class="tag tag-blue">ä¸­å</span></td><td>åå®¶åºè²¨/ååéé/è£è²¨</td><td>1.9å¸</td><td>ç©©å®è²¨æºãåå¸éé</td></tr>
-      <tr><td><span class="tag tag-yellow">è¼å¤§å</span></td><td>ç¹å®è·¯ç·/è¼é«è¼ééé</td><td>3.5¸</td><td>å®åè·¯ç·ãè¼ééæ±</td></tr>
-      <tr><td><span class="tag tag-purple">å¤§å/ç¹æ®</span></td><td>å°è»/æ£§æ¿/åå°åº</td><td>åä½è»é</td><td>å®¢è£½åãé«å®å¹</td></tr>
+    ${card('📦 貨件市場分層',null,`<table><thead><tr><th>分層</th><th>貨件類型</th><th>適用車型</th><th>市場特徵</th></tr></thead><tbody>
+      <tr><td><span class="tag tag-cyan">小型</span></td><td>S90以下/電商小件/即時配送</td><td>機車</td><td>高頻、標準化、量大</td></tr>
+      <tr><td><span class="tag tag-blue">中型</span></td><td>商家出貨/區域配送/補貨</td><td>1.9噸</td><td>穩定貨源、城市配送</td></tr>
+      <tr><td><span class="tag tag-yellow">較大型</span></td><td>特定路線/較高載重配送</td><td>3.5���</td><td>定向路線、載重需求</td></tr>
+      <tr><td><span class="tag tag-purple">大型/特殊</span></td><td>專車/棧板/倉到店</td><td>合作車隊</td><td>客製化、高單價</td></tr>
     </tbody></table>`)}
   `;
 };
 
 pages.customers = function(){
   const t = subTabs.customers||0;
-  const phase1 = ['MOMOå¹³å°ç¸éç¬¬ä¸å°åºè²¨å','å¹³å°ä¾æåèåçå','æ¢æéééæ±å ´æ¯ä¸­çåå®¶','å¯ææ¢æèå»¶ä¼¸åä½è»é','ååæ©è»ééå¤¥ä¼´'];
-  const strats = [['å¾å§é¨éç°éå§','åé©è­MOMOå ´æ¯ä¸­çäº¤æèå±¥ç´éç°'],['ç¬¬ä¸å°åºè²¨çºæ ¸å¿','æåæ£ãæè¤éãæå·å¹³å°å¹å¼çå ´æ¯'],['ç¶²ç«/åºè²¨å®å°æµ','å©ç¨æ¢ææ¥è§¸é»æ¨åå¹³å°æåå°å¥'],['ä½éæª»ä¸ç·','è®è²¨ä¸»èè»éè½æå¿«éé«é©å¹³å°å¼å¼']];
-  const phase2 = ['D2C å®ç¶²åå®¶','å¤é¨åçå','ååé¶å®èéè·¯å','ä¸­å¤§åé»ååå®¶','æè£è²¨éééæ±ä¹ä¼æ¥­å®¢æ¶'];
-  const phase3 = ['ä¸­å°åç©æµæ¥­è','è»éç¶éè','å°è»èæ£§æ¿åä½è»é','ç¶­ä¿®èè»è¼ä¾æå','ä¿éªèéèåä½å¤¥ä¼´','æ¸ä½ç³»çµ±æååä½æ¹'];
+  const phase1 = ['MOMO平台相關第三地出貨商','平台供應商與品牌商','既有配送霂求場景中的商家','富昇既有與延伸合作車隊','區域機車配送夥伴'];
+  const strats = [['從內部閉環開始','先驗證MOMO場景中的交易與履約閉環'],['第三地出貨為核心','最分散、最複雜、最具平台價值的場景'],['網站/出貨單導流','利用既有接觸點推動平台服務導入'],['低門檻上線','讓貨主與車隂能最快速體驗平台僼值']];
+  const phase2 = ['D2C 官網商家','外部品牌商','區域零售與通路商','中大型電商商家','有補貨配送霂求之企業客戶'];
+  const phase3 = ['中小型物流業者','車隊經釟者','專車與棧板合作車隊','維修與車輛供應商','保險與金融合作夥伴','數位系統服務合作方'];
   let content = '';
   if(t===0) content = `<div class="grid-2">
-    ${card('åªåéå®å®¢ç¾¤',null,`<p style="font-size:.8rem;color:var(--text-sec);margin-bottom:14px">ææ¥è¿å¯æç¾æ³ãæå®¹æå°å¥å¹³å°çå°è±¡</p>${phase1.map((a,i)=>checkItem(i+1,a,'','var(--accent)')).join('')}`,'border-left:4px solid var(--accent)')}
-    ${card('åå¥ç­ç¥',null,strats.map(s=>`<div style="padding:11px 0;border-bottom:1px solid #f1f5f9"><div style="font-weight:600;font-size:.86rem">${s[0]}</div><div style="font-size:.76rem;color:var(--text-sec);margin-top:2px">${s[1]}</div></div>`).join(''))}
+    ${card('優先鎖定客群',null,`<p style="font-size:.8rem;color:var(--text-sec);margin-bottom:14px">最接近富昇現況、最容易導入平台的對象</p>${phase1.map((a,i)=>checkItem(i+1,a,'','var(--accent)')).join('')}`,'border-left:4px solid var(--accent)')}
+    ${card('切入策略',null,strats.map(s=>`<div style="padding:11px 0;border-bottom:1px solid #f1f5f9"><div style="font-weight:600;font-size:.86rem">${s[0]}</div><div style="font-size:.76rem;color:var(--text-sec);margin-top:2px">${s[1]}</div></div>`).join(''))}
   </div>`;
-  if(t===1) content = card('MVP é©è­å¾æ´å±',null,`<div class="grid-3">${phase2.map(t=>`<div class="stat-card"><div style="font-size:.86rem;font-weight:500">${t}</div></div>`).join('')}</div>`);
-  if(t===2) content = card('å¹³å°è¦æ¨¡åå¾æå±',null,`<div class="grid-3">${phase3.map(t=>`<div class="stat-card"><div style="font-size:.86rem;font-weight:500">${t}</div></div>`).join('')}</div>`);
-  return tabsHtml('customers',['ç¬¬ä¸éæ®µ','ç¬¬äºéæ®µ','ç¬¬ä¸éæ®µ'])+content;
+  if(t===1) content = card('MVP 驗證後擴展',null,`<div class="grid-3">${phase2.map(t=>`<div class="stat-card"><div style="font-size:.86rem;font-weight:500">${t}</div></div>`).join('')}</div>`);
+  if(t===2) content = card('平台規模化後拓展',null,`<div class="grid-3">${phase3.map(t=>`<div class="stat-card"><div style="font-size:.86rem;font-weight:500">${t}</div></div>`).join('')}</div>`);
+  return tabsHtml('customers',['第一階段','第二階段','第三階段'])+content;
 };
 
 pages.services = function(){
   const t = subTabs.services||0;
   const svc = [
-    {title:'ð¢ å°è²¨ä¸»çæå',color:'#3b82f6',items:['ç·ä¸å«è»èé ç´éé','å³æè©¢å¹èå ±å¹','å¤è»åèå¤æåæ¨¡å¼é¸æ','S90ä»¥ä¸å°ä»¶éé','1.9å¸/3.5å¸éé','ç¬¬ä¸å°åºè²¨ééç®¡ç','å°è»èæ£§æ¿ééåªå','ééè¿½è¹¤èçææ¥è©¢','ç°å¸¸éç¥èç®¡ç','å°å¸³èå ±è¡¨','API/ç³»çµ±ä¸²æ¥']},
-    {title:'ðª å°åå®¶çæå',color:'#10b981',items:['ç¬¬ä¸å°åºè²¨æ´å','åºè²¨èééå¯è¦å','åå®¶ç©æµç®¡ç','èªæç¶²ç«è¨å®ç©æµæ¯æ´','SLAèééææç®¡ç','ç°å¸¸ä»¶ç®¡ç','ééç¸¾æå ±è¡¨','ä¸­å°ååå®¶ç©æµåç´æå']},
-    {title:'ð å°è»éèå¸æ©',color:'#f59e0b',items:['ç©©å®è²¨æºå°å¥','æ¸ä½æ¥å®èæ´¾è»','è·¯ç·èä»»åç®¡ç','PODé»å­ç°½æ¶','åé ­è»èç©ºè»åªå','å°å¸³èæ¶æ¬¾æ¯æ´','è»éç¸¾æåæ','å¸æ©ç®¡çèæåæ¯æ´']},
-    {title:'ð çæç³»æå',color:'#8b5cf6',items:['ä¿éª','è»è¼æ¡è³¼','ç¶­ä¿®ä¿é¤','æ¸ä½ç³»çµ±æå','è»éç®¡ç SaaS','å¸æ©æåèå¹è¨','è³è¨ç³»çµ±æ´å','ä¾æééèæå']},
+    {title:'🏢 對貨主的服務',color:'#3b82f6',items:['線上叫車與預約配送','即時詢價與報價','多車型與多服務模式選擇','S90以下小件配送','1.9噸/3.5噸配送','第三地出貨配送管理','專車與棧板配送媒合','配送追蹤與狀態查詢','異常通知與管理','對帳與報表','API/系統串接']},
+    {title:'🏪 對商家的服務',color:'#10b981',items:['第三地出貨整合','出貨與配送可視化','商家物流管理','自有網站訂單物流支援','SLA與配送時效管理','異常件管理','配送績效報表','中小型商家物流升級服務']},
+    {title:'🚛 對車隊與司機',color:'#f59e0b',items:['穩定貨源導入','數位接單與派車','路線與任務管理','POD電子簽收','回頭車與空車媒合','對帳與收款支援','車隊績效分析','司機管理與服務支援']},
+    {title:'🌐 生態系服務',color:'#8b5cf6',items:['保險','車輛採購','維修保養','數位系統服務','車隊管理 SaaS','司機招募與培訓','資訊系統整合','供應鏈金融服務']},
   ];
   const s = svc[t];
   return tabsHtml('services',svc.map(x=>x.title)) +
@@ -363,39 +363,39 @@ pages.services = function(){
 };
 
 pages.revenue = function(){
-  const revMix = [{n:'äº¤ææ¶å¥',v:45,c:'#3b82f6'},{n:'å¹³å°æ¶å¥',v:25,c:'#10b981'},{n:'çæç³»åæ½¤',v:18,c:'#f59e0b'},{n:'éèæ¶å¥',v:12,c:'#8b5cf6'}];
-  const barData = [{l:'1æ',v:8.5},{l:'3æ',v:10.8},{l:'5æ',v:14.5},{l:'7æ',v:18.8},{l:'9æ',v:24.2},{l:'11æ',v:31.5},{l:'12æ',v:35.2}];
+  const revMix = [{n:'交易收入',v:45,c:'#3b82f6'},{n:'平台收入',v:25,c:'#10b981'},{n:'生態系分潤',v:18,c:'#f59e0b'},{n:'金融收入',v:12,c:'#8b5cf6'}];
+  const barData = [{l:'1月',v:8.5},{l:'3月',v:10.8},{l:'5月',v:14.5},{l:'7月',v:18.8},{l:'9月',v:24.2},{l:'11月',v:31.5},{l:'12月',v:35.2}];
   const cats = [
-    {t:'äº¤ææ¶å¥',c:'#3b82f6',items:['æ´¾è»æ®åè²»','å±¥ç´ç®¡çè²»','ç¬¬ä¸å°åºè²¨æåè²»','å°è»èæ£§æ¿åªåè²»','å å¼æææåè²»']},
-    {t:'å¹³å°æ¶å¥',c:'#10b981',items:['åå®¶ç©æµæ¨¡çµè²»','è»éç®¡çç³»çµ±è²»','APIä¸²æ¥è²»','æ¸æåæèå ±è¡¨æåè²»']},
-    {t:'çæç³»åæ½¤',c:'#f59e0b',items:['ä¿éªåæ½¤','ç¶­ä¿®èä¿é¤åä½æ¶å¥','è»è¼æ¡è³¼åä½æ¶å¥','æ¸ä½ç³»çµ±èé¡§åæåæ¶å¥']},
-    {t:'éèæ¶å¥',c:'#8b5cf6',items:['éè²»å¢ä»','ææ¶å¸³æ¬¾èè³','è»éçéè²¸æ¬¾','ä¿¡ç¨è©åèæä¿¡æå']},
+    {t:'交易收入',c:'#3b82f6',items:['派車撮合費','履約管理費','第三地出貨服務費','專車與棧板媒合費','加值時效服務費']},
+    {t:'平台收入',c:'#10b981',items:['商家物流模組費','車隊管理系統費','API串接費','數據分析與報表服務費']},
+    {t:'生態系分潤',c:'#f59e0b',items:['保險分潤','維修與保養合作收入','車輛採購合作收入','數位系統與顧問服務收入']},
+    {t:'金融收入',c:'#8b5cf6',items:['運費墊付','應收帳款融資','車隊營運貸款','信用評分與授信服務']},
   ];
 
   const pieHtml = `<div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px">${revMix.map(r=>`<div style="flex:1;min-width:100px;text-align:center;padding:16px;background:${r.c}11;border-radius:10px;border:2px solid ${r.c}33"><div style="font-size:1.6rem;font-weight:800;color:${r.c}">${r.v}%</div><div style="font-size:.78rem;font-weight:500;margin-top:2px">${r.n}</div></div>`).join('')}</div>`;
 
   return `<div class="grid-2">
-    ${card('ð° ç²å©çµæ§åå¸ï¼ç®æ¨ï¼',null,pieHtml)}
-    ${card('ð çæ¶æé·é ä¼°ï¼ç¾è¬/æï¼',null,makeBar(barData,38,'var(--accent)'))}
+    ${card('💰 獲利結構分布（目標）',null,pieHtml)}
+    ${card('📈 營收成長預估（百萬/月）',null,makeBar(barData,38,'var(--accent)'))}
   </div>
-  <div class="grid-2">${cats.map(c=>card(c.t,null,c.items.map(i=>`<div style="font-size:.8rem;padding:4px 0;color:var(--text-sec)">â¢ ${i}</div>`).join(''),`border-left:4px solid ${c.c}`)).join('')}</div>`;
+  <div class="grid-2">${cats.map(c=>card(c.t,null,c.items.map(i=>`<div style="font-size:.8rem;padding:4px 0;color:var(--text-sec)">• ${i}</div>`).join(''),`border-left:4px solid ${c.c}`)).join('')}</div>`;
 };
 
 pages.architecture = function(){
   const layers = [
-    {t:'ç¬¬ä¸å±¤ï¼åå°æåå±¤',c:'#3b82f6',b:'#93c5fd',bg:'#eff6ff',m:['è²¨ä¸»å¥å£','åå®¶å¥å£','è»é/å¸æ©å¥å£','ç®¡çå¾å°']},
-    {t:'ç¬¬äºå±¤ï¼äº¤æå±¤',c:'#10b981',b:'#6ee7b7',bg:'#ecfdf5',m:['ä¸å®','å ±å¹','æ®å','æ´¾è»','æ¥å®','æ¹æ´¾/åæ¶']},
-    {t:'ç¬¬ä¸å±¤ï¼å±¥ç´å±¤',c:'#f59e0b',b:'#fcd34d',bg:'#fefce8',m:['è·¯ç·ç®¡ç','ETAé ä¼°','PODç°½æ¶','ééè¿½è¹¤','ç°å¸¸å·¥ä½æµ']},
-    {t:'ç¬¬åå±¤ï¼è²¡åçµç®å±¤',c:'#ef4444',b:'#fca5a5',bg:'#fef2f2',m:['å°å¸³','åæ½¤','éç¥¨','è«æ¬¾','ä»£æ¶ä»£ä»']},
-    {t:'ç¬¬äºå±¤ï¼è³æèAIå±¤',c:'#8b5cf6',b:'#c4b5fd',bg:'#f5f3ff',m:['ä¸»è³æ','äºä»¶æµ','è¨å®è³ææ¹','BI','AIæ¨è¦/é æ¸¬/é¢¨æ§']},
-    {t:'ç¬¬å­å±¤ï¼æ´åèæ²»çå±¤',c:'#06b6d4',b:'#67e8f9',bg:'#ecfeff',m:['API Gateway','IAM/SSO/MFA','ç¨½æ ¸è»è·¡','MOMO/ERP/TMSä¸²æ¥','å°è»æ£§æ¿ç³»çµ±','çæç³»API']},
+    {t:'第一層：前台服務層',c:'#3b82f6',b:'#93c5fd',bg:'#eff6ff',m:['貨主入口','商家入口','車隊/司機入口','管理後台']},
+    {t:'第二層：交易層',c:'#10b981',b:'#6ee7b7',bg:'#ecfdf5',m:['下單','報價','撮合','派車','接單','改派/取消']},
+    {t:'第三層：履約層',c:'#f59e0b',b:'#fcd34d',bg:'#fefce8',m:['路線管理','ETA預估','POD簽收','配送追蹤','異常工作流']},
+    {t:'第四層：財務結算層',c:'#ef4444',b:'#fca5a5',bg:'#fef2f2',m:['對帳','分潤','開票','請款','代收代付']},
+    {t:'第五層：資料與AI層',c:'#8b5cf6',b:'#c4b5fd',bg:'#f5f3ff',m:['主資料','事件流','訂單資料湖','BI','AI推薦/預測/風控']},
+    {t:'第六層：整合與治理層',c:'#06b6d4',b:'#67e8f9',bg:'#ecfeff',m:['API Gateway','IAM/SSO/MFA','稽核軌跡','MOMO/ERP/TMS串接','專車棧板系統','生態系API']},
   ];
-  const radarData = [{n:'è»è²¨å¹é',a:85,b:60},{n:'æºæ§èª¿åº¦',a:80,b:40},{n:'æ¸æå¹³å°',a:75,b:30},{n:'çææå',a:70,b:20},{n:'éèæå',a:60,b:10},{n:'å±¥ç´ç®¡ç',a:90,b:75}];
+  const radarData = [{n:'車貨匹配',a:85,b:60},{n:'智慧調度',a:80,b:40},{n:'數據平台',a:75,b:30},{n:'生態服務',a:70,b:20},{n:'金融服務',a:60,b:10},{n:'履約管理',a:90,b:75}];
 
-  return card('ðï¸ å­å±¤å¹³å°æ¶æ§è¨­è¨',['API-first + è³æä¸­å°','tag-blue'],
-    `<p style="font-size:.8rem;color:var(--text-sec);margin-bottom:16px">äº¤æå¹³å°æ ¸å¿ + æ¨¡çµåæåæ¶æ§ + API-first + è³æä¸­å°æ²»ç</p>` +
+  return card('🏗️ 六層平台架構設計',['API-first + 資料中台','tag-blue'],
+    `<p style="font-size:.8rem;color:var(--text-sec);margin-bottom:16px">交易平台核心 + 模組化服務架構 + API-first + 資料中台治理</p>` +
     layers.map(l=>`<div class="arch-layer" style="border-color:${l.b};background:${l.bg}"><div class="arch-layer-title" style="color:${l.c}">${l.t}</div><div class="arch-modules">${l.m.map(m=>`<div class="arch-mod" style="border-color:${l.b};color:${l.c}">${m}</div>`).join('')}</div></div>`).join('')
-  ) + card('ð¯ å¹³å°è½åå°æ¯ï¼ç®æ¨ vs ç¾æ³ï¼',null,`<table><thead><tr><th>è½åç¶­åº¦</th><th>ç®æ¨è½å</th><th>ç¾æè½å</th><th>ç¼ºå£</th></tr></thead><tbody>${radarData.map(r=>{
+  ) + card('🎯 平台能力對比（目標 vs 現況）',null,`<table><thead><tr><th>能力維度</th><th>目標能力</th><th>現有能力</th><th>缺口</th></tr></thead><tbody>${radarData.map(r=>{
     const gap = r.a-r.b;const clr = gap>40?'var(--danger)':gap>20?'var(--warning)':'var(--success)';
     return `<tr><td style="font-weight:500">${r.n}</td><td><div class="progress-bar" style="width:120px;display:inline-block;vertical-align:middle"><div class="progress-fill" style="width:${r.a}%;background:var(--accent)"></div></div> ${r.a}%</td><td><div class="progress-bar" style="width:120px;display:inline-block;vertical-align:middle"><div class="progress-fill" style="width:${r.b}%;background:var(--warning)"></div></div> ${r.b}%</td><td style="color:${clr};font-weight:600">${gap>0?'+':''}${gap}</td></tr>`;
   }).join('')}</tbody></table>`);
@@ -403,54 +403,54 @@ pages.architecture = function(){
 
 pages.devmode = function(){
   const modes = [
-    {t:'å¨èªå»º',v:'ä¸å»ºè­°',vc:'tag-red',pros:['åæ¥­è¦åææ¡åº¦æé«','æ¸æèæ¶æ§èªä¸»æ§é«','é·æå¯å§åè½å'],cons:['å»ºç½®æéé·','å¹³å°äººæè¦æ±é«','ææ¼è®çºå¤§åITå°æ¡','åæè©¦é¯ææ¬é«']},
-    {t:'å¨å§å¤',v:'ä¸å»ºè®­',vc:'tag-red',pros:['åæä¸ç·è¼å¿«','å¯åç¨å¤é¨æ¨¡çµç¶é©','MVPéåº¦é«'],cons:['åæ¥­è¦åè¢«å¤é¨ææ¡','ä¿®æ¹èæ´åææ¬é«','æè¡ç¶å®','æ¸æè³ç¢é£å§å']},
-    {t:'ç··åæ¨¡å¼',v:'å»ºè­°æ¡ç¨',vc:'tag-green',pros:['å¼é¡§éåº¦èæ§å¶å','æ ¸å¿è¦åèæ¸æä¸»æ¬å¨å§é¨','å¯åå¤é¨æ¨¡çµéä½è©¦é¯','åéæ®µéæ­¥å§åè½å'],cons:['éæçç¢åèæ¶æ§æ²»ç','å§å¤é¨åå·¥é æ¸æ¥','éä¸»è²¬PMO']},
+    {t:'全自建',v:'不建議',vc:'tag-red',pros:['商業規則掌握度最高','數據與架構自主性高','長期可內化能力'],cons:['建置時間長','平台人才要求高','易演變為大型IT專案','初期試錯成本高']},
+    {t:'全委外',v:'不建训',vc:'tag-red',pros:['初期上線較快','可借用外部模組經驗','MVP速度高'],cons:['商業規則被外部掌握','修改與擴充成本高','技術綁定','數據資產難內化']},
+    {t:'緷合模式',v:'建議採用',vc:'tag-green',pros:['兼顧速度與控制力','核心規則與數據主權在內部','可借外部模組降低試錯','初階段逐步內化能力'],cons:['需成熟產品與架構治理','內外部分工須清楚','需主責PMO']},
   ];
-  const core = ['å¹³å°ç¢åèå','è¨å®èäº¤æä¸»æµç¨','è²¨ä»¶æåè¦åæ¨¡å','å ±å¹èå®å¹éè¼¯','æ­åèæ´¾è»è¦å','éè½æ± ç®¡çéè¼¯','ä¸»è³ææ¨¡å','å°å¸³/çµç®/åæ½¤éè¼¯','æ¸æä¸­å°æ¶æ§','AIè³ææ¨¡åèæç¨è¦å','MOMO/åæ¾/æ¢æç³»çµ±æ´åè¦å','.eval-assess-print'];
-  const peri = ['è²¨ä¸»ç«¯åå°','å¸æ© App','å°åèå°èª','POD é»å­ç°½æ¶','è¨æ¯éç¥','BI è¦è¥ºååå°','å®¢æå·¥å®æ¨¡çµ','çæç³» API ä¸²æ¥','å¤é¨åä½è»éæ¥å¥æ¨¡çµ','é¨ååªåæ¼ç®æ³æ¨¡çµ'];
+  const core = ['平台產品藍圖','訂單與交易主流程','貨件服務規則模型','報價與定價邏輯','播合與派車規則','運能池管理邏輯','主資料模型','對帳/結算/分潤邏輯','數據中台架構','AI資料模型與應用規則','MOMO/商暾/既有系統整合規則','.eval-assess-print'];
+  const peri = ['貨主端前台','司機 App','地圖與導航','POD 電子簽收','訊息通知','BI 視襺化前台','客服工單模組','生態系 API 串接','外部合作車隊接入模組','部分優化演算法模組'];
 
   return `
     <div class="card" style="background:linear-gradient(135deg,#f0fdf4,#ecfdf5);border-color:#86efac">
-      <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:6px">æ²»çåå</h3>
-      <p style="font-size:.92rem;color:var(--text-sec)"><strong style="color:var(--success)">30% æ ¸å¿ç³»çµ±èªå»º</strong>ï¼å¨éæ¯æ´æåç³»çµ±å¯å¤é¨éç¼æåä½</p>
+      <h3 style="font-size:1.05rem;font-weight:700;margin-bottom:6px">治理原則</h3>
+      <p style="font-size:.92rem;color:var(--text-sec)"><strong style="color:var(--success)">30% 核心系統自建</strong>，周邊支援服務系統可外部開發或合作</p>
     </div>
     <div class="grid-3">${modes.map(m=>`<div class="card" style="border-top:4px solid ${m.vc==='tag-green'?'var(--success)':'var(--danger)'}">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><h4 style="font-weight:700">${m.t}</h4><span class="tag ${m.vc}">${m.v}</span></div>
-      <div style="margin-bottom:10px"><div style="font-size:.73rem;font-weight:600;color:var(--success);margin-bottom:3px">åªé»</div>${m.pros.map(p=>`<div style="font-size:.76rem;padding:2px 0">+ ${p}</div>`).join('')}</div>
-      <div><div style="font-size:.73rem;font-weight:600;color:var(--danger);margin-bottom:3px">é¢¨éª</div>${m.cons.map(c=>`<div style="font-size:.76rem;padding:2px 0;color:var(--text-sec)">- ${c}</div>`).join('')}</div>
+      <div style="margin-bottom:10px"><div style="font-size:.73rem;font-weight:600;color:var(--success);margin-bottom:3px">優點</div>${m.pros.map(p=>`<div style="font-size:.76rem;padding:2px 0">+ ${p}</div>`).join('')}</div>
+      <div><div style="font-size:.73rem;font-weight:600;color:var(--danger);margin-bottom:3px">風險</div>${m.cons.map(c=>`<div style="font-size:.76rem;padding:2px 0;color:var(--text-sec)">- ${c}</div>`).join('')}</div>
     </div>`).join('')}</div>
     <div class="grid-2">
-      ${card('æ ¸å¿ 30% â èªå»º/å§é¨ä¸»å°',null,core.map((t,i)=>checkItem('æ ¸',t,'','var(--accent)')).join(''),'border-left:4px solid var(--accent)')}
-      ${card('å¨é 70% â å¯åä½/å§å¤/æ¡è³¼',null,peri.map((t,i)=>checkItem('å¤',t,'','var(--success)')).join(''),'border-left:4px solid var(--success)')}
+      ${card('核心 30% — 自建/內部主導',null,core.map((t,i)=>checkItem('核',t,'','var(--accent)')).join(''),'border-left:4px solid var(--accent)')}
+      ${card('周邊 70% — 可合作/委外/採購',null,peri.map((t,i)=>checkItem('外',t,'','var(--success)')).join(''),'border-left:4px solid var(--success)')}
     </div>`;
 };
 
 pages.systems = function(){
   const cats = [
-    {cat:'A. æ ¸å¿ç©æµä½æ¥­ç³»çµ±',items:['ééç®¡çç³»çµ±','æ´¾è»ç³»çµ±','å±¥ç´è¿½è¹¤ç³»çµ±','è»è¼ç®¡çç³»çµ±','å¸æ©ç®¡çç³»çµ±'],c:'#3b82f6'},
-    {cat:'B. è¨å®èåºè²¨ç¸é',items:['MOMOè¨å®ä¾æºç³»çµ±','åºè²¨å®ä½æ¥­ç³»çµ±','ç¬¬ä¸å°åºè²¨æµç¨ç³»çµ±','åå®¶/ä¾æåå°æ¥ç³»çµ±'],c:'#10b981'},
-    {cat:'C. å®¢æèç°å¸¸ç®¡ç',items:['å®¢è­ªç³»çµ±','å·¥å®ç³»çµ±','ç°å¸¸ä»¶èçæ©å¶','ééçæéç¥ç³»çµ±'],c:'#f59e0b'},
-    {cat:'D. è²¡åèçµç®ç³»çµ±',items:['å°å¸³ç³»çµ±','è«æ¬¾ç³»çµ±','ææ¶æä»ç®¡ç','åæ½¤èåä½è»éçµç®'],c:'#ef4444'},
-    {cat:'E. æ¸æèå ±è¡¨ç³»çµ±',items:['BI/å ±è¡¨ç³»çµ±','çéåè¡¨æ¿','KPIç£æ§å ±è¡¨','æ­·å²è¨å®èééè³æåº«'],c:'#8b5cf6'},
-    {cat:'F. å¤é¨åä½ç³»çµ±',items:['å°è»ç®¡çç³»çµ±','æ£§æ¿ç®¡çç³»çµ±','å¤é¨åä½è»éç®¡ç','å¤é¨APIä¸²æ¥è½å'],c:'#06b6d4'},
+    {cat:'A. 核心物流作業系統',items:['配送管理系統','派車系統','履約追蹤系統','車輛管理系統','司機管理系統'],c:'#3b82f6'},
+    {cat:'B. 訂單與出貨相關',items:['MOMO訂單來源系統','出貨單作業系統','第三地出貨流程系統','商家/供應商對接系統'],c:'#10b981'},
+    {cat:'C. 客服與異常管理',items:['客譪系統','工單系統','異常件處理機制','配送狀態通知系統'],c:'#f59e0b'},
+    {cat:'D. 財務與結算系統',items:['對帳系統','請款系統','應收應付管理','分潤與合作車隊結算'],c:'#ef4444'},
+    {cat:'E. 數據與報表系統',items:['BI/報表系統','營運儀表板','KPI監控報表','歷史訂單與配送資料庫'],c:'#8b5cf6'},
+    {cat:'F. 外部合作系統',items:['專車管理系統','棧板管理系統','外部合作車隊管理','外部API串接能力'],c:'#06b6d4'},
   ];
-  const outputs = ['ç¾æç³»çµ±ç¸½è¡¨','ç³»çµ±åè½èè²³è²¬å®ä½','ä½¿ç¨èè§è²èçé»','è³æä¾æºèä¸»è³æçµæ§','èæªã¾ö[æÏ>Ã*¢÷Â7'rX°>¿ÊÿR ¿>¿VÓB ¿¦r¦7îè¿>¿ÞcÆÃ"ZÜtì(ÉÑÕÉ¸(íÉ n¦î{ãþV?¦0±¹Õ±°±ñ¥Ø±ÍÌôÉ¥´ÌÍÑå±ôÀèÄÁÁàøímlÂ~R4°¾3bÞËr'N«êo>¿îÛR£j¢÷*o¾ò|°ÍàÉØt±lj¾â<°N«êob¿æÏ>Ããþòë>¾ò|°ÐÐÐÐt±lÂ~R\°N«êo>¿¦?¦;VÓB#¢3¦v{¦7k¢Æë¾ò|°ÄÁäàÄut¹µÀ¡Äôùñ¥Ø±ÍÌôÍÑÐµÉÍÑå±ôÑáÐµ±¥¸é¹ÑÈí½ÉÈµÑ½ÀèÍÁàÍ½±¥íÅlÉuôøñ¥ØÍÑå±ô½¹ÐµÍ¥éèÄ¸áÉ´íµÉ¥¸µ½ÑÑ½´èÑÁàøíÅlÁuôð½¥Øøñ¥ØÍÑå±ô½¹ÐµÍ¥éè¸àÑÉ´í½¹ÐµÝ¥¡ÐèÔÀÀøíÅlÅuôð½¥Øøð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù°½ÉÈµ±ÐèÑÁàÍ½±¥ÙÈ ´µÝÉ¹¥¹¤¥ô(ñ¥Ø±ÍÌôÉ¥´ÈøíÑÌ¹µÀ¡ôùñ¥Ø±ÍÌôÉÍÑå±ô½ÉÈµ±ÐèÑÁàÍ½±¥í¹ôøñ ÐÍÑå±ô½¹ÐµÝ¥¡ÐèØÀÀí½¹ÐµÍ¥éè¸àáÉ´íµÉ¥¸µ½ÑÑ½´èáÁàí½±½Èèí¹ôøí¹Ñôð½ Ðøí¹¥ÑµÌ¹µÀ¡¤ôùñ¥ØÍÑå±ô¥ÍÁ±äé±àí±¥¸µ¥ÑµÌé¹ÑÈíÀèÝÁàíÁ¥¹èÕÁàÀí½¹ÐµÍ¥éè¸áÉ´øñÍÁ¸ÍÑå±ôÝ¥Ñ èÝÁàí¡¥¡ÐèÝÁàí½ÉÈµÉ¥ÕÌèÔÀí­É½Õ¹èí¹ôí±àµÍ¡É¥¹¬èÀøð½ÍÁ¸øí¥ôð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¤¹©½¥¸ ¥ôð½¥Øø(íÉ Â~N,n¦î{Rë"Czp±¹Õ±°±ñ¥Ø±ÍÌôÉ¥´Ìøí½ÕÑÁÕÑÌ¹µÀ¡Ðôùñ¥Ø±ÍÌôÍÑÐµÉÍÑå±ôÁ¥¹èÄÅÁàøñ¥ØÍÑå±ô½¹ÐµÍ¥éè¸áÉ´í½¹ÐµÝ¥¡ÐèÔÀÀøíÑôð½¥Øøð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¥ô(ì)ôì()ÁÌ¹¤ôÕ¹Ñ¥½¸ ¥ì(½¹ÍÐÀÄôl.W/Òû¢î+îë¢¶À°¢Þ¿ÞkröÏ2X°Q¦CòÀ°¢w¢ò':"z@°VÃâã¦C¢¶°¢î+¦j+âûV#"z@tì(½¹ÍÐÀÈôl.W/¦/çîë¢¶À°¢Ê£âï¦rÆ¦Câ°°þR£¦£¦j«¢z,°ºr4$¹Ð°VºÛ&§Ö¦V<¹Ð°Â7âÏ¢"B#Ò¾§ã¢«.W2Xtì(½¹ÍÐµÑÕÉ¥Ñäômí¸è.W/Òû¢î(±èàÀ±èäÕô±í¸è¢Þ¿Þk«2X±èÜÀ±èäÁô±í¸èQ¦CòÀ±èÜÔ±èäÉô±í¸è¦/çîë¢¶È±èÈÀ±èÜÕô±í¸è¦rÆ¦Câ°±èÄÔ±èÜÁô±í¸è¦£:¢z,±èÄÀ±èØÕô±í¸è$¹Ð±èÔ±èØÁõtì(ÉÑÕÉ¸(ñ¥Ø±ÍÌôÉ¥´Èø(íÉ Â~XA¡ÍÄP$Â;¦7¦îx±lV#:« °Ñµ±Õt±ñÀÍÑå±ô½¹ÐµÍ¥éè¸ÜáÉ´í½±½ÈéÙÈ ´µÑáÐµÍ¤íµÉ¥¸µ½ÑÑ½´èÄÁÁàû#R£Zó>¿nÓ:RçZÆÒV#:¢"¾o"§ÖC/jÓf¼ð½ÀøíÀÄ¹µÀ ¡Ð±¤¤ôù¡­%Ñ´¡¤¬Ä±Ð°°ÙÈ ´µ¹Ð¤¤¤¹©½¥¸ ¥õ°½ÉÈµÑ½ÀèÑÁàÍ½±¥ÙÈ ´µ¹Ð¤¥ô(íÉ Â~A¡ÍÈP$¦Ë¦j;'R ±lVãNk¦¦.T°ÑµÁÕÉÁ±t±ñÀÍÑå±ô½¹ÐµÍ¥éè¸ÜáÉ´í½±½ÈéÙÈ ´µÑáÐµÍ¤íµÉ¥¸µ½ÑÑ½´èÄÁÁàûú¢ÎZgÒ¿¦7ú3¦C¶fóÆTð½ÀøíÀÈ¹µÀ ¡Ð±¤¤ôù¡­%Ñ´¡¤¬Ä±Ð°°ÙÈ ´µÁÕÉÁ±¤¤¤¹©½¥¸ ¥õ°½ÉÈµÑ½ÀèÑÁàÍ½±¥ÙÈ ´µÁÕÉÁ±¤¥ô(ð½¥Øø(íÉ Â~N($¢÷*o"Cê¢z,±¹Õ±°±ñÑ±øñÑ¡øñÑÈøñÑ ù$¢÷*lð½Ñ øñÑ ùA¡ÍÄ"Cêð½Ñ øñÑ ùA¡ÍÈn»¢dð½Ñ øð½ÑÈøð½Ñ¡øñÑ½äøíµÑÕÉ¥Ñä¹µÀ¡´ôùñÑÈøñÑÍÑå±ô½¹ÐµÝ¥¡ÐèÔÀÀøí´¹¹ôð½ÑøñÑøñ¥Ø±ÍÌôÁÉ½ÉÍÌµÈÍÑå±ôÝ¥Ñ èÄÐÁÁàí¥ÍÁ±äé¥¹±¥¹µ±½¬íÙÉÑ¥°µ±¥¸éµ¥±øñ¥Ø±ÍÌôÁÉ½ÉÍÌµ¥±°ÍÑå±ôÝ¥Ñ èí´¹ôí­É½Õ¹éÙÈ ´µ¹Ð¤øð½¥Øøð½¥Øøí´¹ôð½ÑøñÑøñ¥Ø±ÍÌôÁÉ½ÉÍÌµÈÍÑå±ôÝ¥Ñ èÄÐÁÁàí¥ÍÁ±äé¥¹±¥¹µ±½¬íÙÉÑ¥°µ±¥¸éµ¥±øñ¥Ø±ÍÌôÁÉ½ÉÍÌµ¥±°ÍÑå±ôÝ¥Ñ èí´¹ôí­É½Õ¹éÙÈ ´µÁÕÉÁ±¤øð½¥Øøð½¥Øøí´¹ôð½Ñøð½ÑÈù¤¹©½¥¸ ¥ôð½Ñ½äøð½Ñ±ù¥ô(ì)ôì()ÁÌ¹Áµ¼ôÕ¹Ñ¥½¸ ¥ì(½¹ÍÐ­¹¸ôì(	­±½éíèäÑÍà±¥ÑµÌémíÐè$ºr4¹Ð¢¢·¢¢ ±ÑÌél$°ºr4t±Àèâ´ô±íÐèVºÛ&§Ö¦V<¹Ð±ÑÌél$°VºØt±Àèö8ô±íÐèÂ7âÏ¢«.W2[¢Ö±ÑÌél¢Ê.dt±Àèâ´õuô°(ú¢úéíèÍàÉØ±¥ÑµÌémíÐè5=5<¢¢Z¸A$âË:¢?ð±ÑÌél*¢L°VÓB t±Àè¦®`ô±íÐè¢Ê£îÛr7.g¢?&òWN;¢¢·¢¢ ±ÑÌélãþ°RNt±Àè¦®`ô±íÐè¢î+¦j+®¼ÁÀU$½U`¢¢·¢¢ ±ÑÌél&7®¼t±Àèâ´õuô°(¦Ë¢3â´éíèÔåÁ±¥ÑµÌémíÐè>ûr'ÎïÖÇn¦îx±ÑÌél¢Î¢¢(t±Àè¦®`ô±íÐèA5<ÖæSzÛ/ë¢ª4±ÑÌélºBt±Àè¦®`õuô°(ÞËº3"@éíèÄÁäàÄ±¥ÑµÌémíÐèV·¢¢#V¯nàXÈº3"@±ÑÌél¶[Vt±Àè¦®`ô±íÐè¦Z/fó¢ò?¢¦WòÃÇF(±ÑÌél*¢Lt±Àè¦®`õuô°(ôì(½¹ÍÐÉ½±Ìôl(íÈèæÏ>Ãâ÷¢Ê¢Ê³êè±èâ÷ÚOBº±ÑÌél"ÃVZçBGÆë¶X°¢ÎêC¢ªÿê°¢Þ£¦£¦Z6S¢ªüuô°(íÈèV.g¢Ê¢Ê³êè±èV.g¦ ±ÑÌél¢Ê£âï.OÆT°¢î+¦j+B#öp°R/ÎïfóÆTuô°(íÈèRN¢Ê¢Ê³êè±èRN¦ ±ÑÌélRN¢^7rX°¢?&òWN;¢¢·¢¢ °Uc¶[Vuô°(íÈè*¢O¢Ê¢Ê³êè±è¢Î¢¢+¦ ±ÑÌélzÛ/¢¢·¢¢ °ÎïÖÇVÓB °ãþ¦Z/fðuô°(íÈè¦/¢Ê¢Ê³êè±è¦/¦ ±ÑÌélÆÒºB°-A'n:°Ö¢/«2Xuô°(íÈè$¢Ê¢Ê³êè±è'rc¦j(±ÑÌél¢z/¦Z/fð°VãNk¶[V°fë'R uô°(tì(ÉÑÕÉ¸(íÉ Â~N,r/vÿºB±¹Õ±°±ñ¥Ø±ÍÌô­¹¸øí=©Ð¹¹ÑÉ¥Ì¡­¹¸¤¹µÀ ¡m¹µ±½±t¤ôùñ¥Ø±ÍÌô­¹¸µ½°øñ¥Ø±ÍÌô­¹¸µ½°µÑ¥Ñ±øñÍÁ¸ÍÑå±ôÝ¥Ñ èáÁàí¡¥¡ÐèáÁàí½ÉÈµÉ¥ÕÌèÔÀí­É½Õ¹èí½°¹ôøð½ÍÁ¸øí¹µôñÍÁ¸ÍÑå±ôµÉ¥¸µ±ÐéÕÑ¼í½¹ÐµÍ¥éè¸ÝÉ´í½±½ÈéÙÈ ´µÑáÐµµÕÑ¤øí½°¹¥ÑµÌ¹±¹Ñ¡ôð½ÍÁ¸øð½¥Øøí½°¹¥ÑµÌ¹µÀ¡ôùñ¥Ø±ÍÌô­¹¸µÉøñ Ôøí¹Ñôð½ Ôøñ¥Ø±ÍÌôÑÌøí¹ÑÌ¹µÀ¡ÑôùñÍÁ¸±ÍÌôÑÑµ±ÕøíÑôð½ÍÁ¸ù¤¹©½¥¸ ¥ôñÍÁ¸±ÍÌôÑí¹Àôôô¦®`üÑµÉé¹Àôôôâ´üÑµå±±½ÜèÑµÉ¸ôÍÑå±ôµÉ¥¸µ±ÐéÕÑ¼øí¹Áôð½ÍÁ¸øð½¥Øøð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¥ô(íÉ Â~>A5<ÖæSzÛ/ë¢ª0±¹Õ±°±ñ¥Ø±ÍÌôÉ¥´ÌÍÑå±ôÀèÄÁÁàøíÉ½±Ì¹µÀ¡Èôùñ¥Ø±ÍÌôÍÑÐµÉÍÑå±ô½ÉÈµÑ½ÀèÍÁàÍ½±¥ÙÈ ´µ¹Ð¤øñ¥ØÍÑå±ô½¹ÐµÝ¥¡ÐèÜÀÀí½¹ÐµÍ¥éè¸àáÉ´øíÈ¹Éôð½¥Øøñ¥ØÍÑå±ô½¹ÐµÍ¥éè¸ÝÉ´í½±½ÈéÙÈ ´µ¹Ð¤íµÉ¥¸µ½ÑÑ½´èÙÁàøíÈ¹ôð½¥ØøíÈ¹ÑÌ¹µÀ¡Ðôùñ¥ØÍÑå±ô½¹ÐµÍ¥éè¸ÜÙÉ´í½±½ÈéÙÈ ´µÑáÐµÍ¤íÁ¥¹èÉÁàÀûíÑôð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¤¹©½¥¸ ¥ôð½¥Øù¥ô(ì)ôì()ÁÌ¹É½µÀôÕ¹Ñ¥½¸ ¥ì(½¹ÍÐÁ¡ÍÌôl(íÀèÄ±Ðè~ë;îë¢¢·r|±ÁÉ¥½èÀ´Ì/r ±èÍàÉØ±ÑÍ­Ìél(l"C®/æÏ>Ãê/´A5<°â÷ÚOBºt±l>ûr'ÎïÖÇ¢"¢ÎZgº3VÓn¦îx°¢Î¢¢+¦ t±lãþ¿F£¦
-+¢÷*oºkú¤°A5<t±lÂ#¢î+¢"vÿÎïÖÇ>¿R£¢¦WòÀ°¦/¦ t±l5YC¾r7¢"*¢O¢^7r[ë¢ª4°*¢O¦VÜt±lB#ösòÓ¢¦WòÃ¢""Þë¢ª4°V.g¦ t±l¢Ê£îÛr7.g¢?&¢z/¢¢·¢¢ °RN¦ t±lâï¢ÎZg¢z/¢¢·¢¢ °¢Î¢¢+¦ uuô°(íÀèÈ±Ðè5Y@îëö»r|±ÁÉ¥½èÐ´Ø/r ±èÄÁäàÄ±ÑÍ­Ìél(læÏ>À5Y@¦Z/fóV.T°¦Z/fórc¦j(t±l²³â'rÃë¢Ê£¢¦¦î{Óf¿â+Þh°¦/¦ t±lLäÀ¼Ä¸çfà¼Ì¸×fã¦7¦¢Ö°RN¦ t±l~ër³â/Z»KÒû¢î+K¢þ÷¢æKÂ7âÏ¦Z'JÀ°¦Z/fórc¦j(t±lVÓB#^r'Â#¢î(¿vÿÎïÖÄ°¢Î¢¢+¦ t±l¢Ê£âï®¿¢"¢î+¦j+®¿&7>Ãâ+Þh°U$½U`t±l~ë8A$ÑÝäîëö¸°zÛ/â¬uuô°(íÀèÌ±Ðè«2[NÓò×r|±ÁÉ¥½èÜ´ÄÈ/r ±èÔåÁ±ÑÍ­Ìél(l¢?&òWN;«2[¢"¢«.W2X°RN¦ t±lB#ös¢î+¦j+NÓ.o.|°V.g¦ t±l$¢Þ¿ÞkröÏ2[Â;°'rc¦j(t±l$.W/Òû¢î+îë¢¶Ãâ+Þh°'rc¦j(t±l[¦£¢Ê£âï.OÆW¢¢#V¬°·.g¦ t±lVãNkâ·>Ã²³â¦j;º×â+Þh°¢Î¢¢+¦ t±l-A'6Ïf¢£vÿâ+Þh°¦/¦ t±l¦C¶2[¦^s¦6×¦
-?¢ò¼°*¢O¦VÜuuô°(íÀèÐ±ÐèR/ÎïfóÆWr|±ÁÉ¥½èÄÌ´ÈÐ/r ±èáÕØ±ÑÍ­Ìél(l[¦£¢Ê£âï¢?¢2[.OÆT°·.g¦ t±l¢ÎZgâ·>Ãòß2[¢"'¦Câ°°'rc¦j(t±lþw¦j«r7.gR/ÎïÂ;°V.g¦ t±lÚ·þ»þw¦+B#ösæÏ>À°¦/¦ t±lúo'¦>#¦G¢z7¦¦îx°¢Ê.g¦ t±l¢î+¢òo:¢ÎóB#ös¢Ö°:¢Îó¦ t±l¢î+¦j+ºBML¢Ö°RN¦ t±lÚ÷¢£vÿ¢"*W¢ÎÆë¶[úwNh°A5<uuô°(tì(ÉÑÕÉ¸Á¡ÍÌ¹µÀ¡Á ôùñ¥Ø±ÍÌôÉÍÑå±ô½ÉÈµ±ÐèÑÁàÍ½±¥íÁ ¹ôø(ñ¥Ø±ÍÌôÉµ¡ÈøñÍÁ¸±ÍÌôÉµÑ¥Ñ±øñÍÁ¸±ÍÌôÑÍÑå±ô­É½Õ¹èíÁ ¹ôÈÈí½±½ÈèíÁ ¹ôùA¡ÍíÁ ¹Áôð½ÍÁ¸øíÁ ¹Ñôð½ÍÁ¸øñÍÁ¸±ÍÌôÑÑµ±ÕøíÁ ¹ÁÉ¥½ôð½ÍÁ¸øð½¥Øø(ñ¥Ø±ÍÌôÉ¥´ÈøíÁ ¹ÑÍ­Ì¹µÀ ¡Ð±¨¤ôù¡­%Ñ´¡¨¬Ä±ÑlÁt±ÑlÅt°äÑÍà¤¤¹©½¥¸ ¥ôð½¥Øø(ð½¥Øù¤¹©½¥¸ ¤ì)ôì()ÁÌ¹­Á¤ôÕ¹Ñ¥½¸ ¥ì(½¹ÍÐ­Á¥Ìôl(í¸èæÏ>Ã2[¢¢Z»6¾P±èÔÀ±ÐèØÔ±Ôèô±í¸èÒï¢ê7¢Ê£âïVà±èàÔ±ÐèÈÀÀ±ÔèºØô°(í¸èÒï¢ê7¢î+¦j(¿>ã¦|±èÄàÀ±ÐèÔÀÀ±Ôèêèô±í¸èê[f:±èäÐ¸Ô±Ðèäà±Ôèô°(í¸èWç°å¸¸ç',c:4.8,t:2,u:'%',inv:1},{n:'æ¯å®æ¯å©',c:22,t:35,u:'NTD'},
-    {n:'å¹³å°GMV',c:18,t:50,u:'M/æ'},{n:'çæç³»æ¶å¥å æ¯',c:2,t:15,u:'%'},
+  const outputs = ['現有系統總表','系統功能與貳責單位','使用者角色與痛點','資料來源與主資料結構','與未��[��ϖ>Ö*����7�'�rX����>�����R���>��VӖB ��r�7��迖>���c��Ö"��Zܝt�(��ɕ��ɸ��(�����퍅ɐ���n���{�����V?��0���ձ����؁������ɥ��̈���屔􉝅����������ml��~R4�����3�b��˚r'�N���o�>���۞R��j���*o��|����͈�ɘ؝t�l��j���<����N���o�b���ϖ>Ú������>���|���������Нt�l��~R\����N���o�>��?�;�VӖB#�3�v{�7�k�������|���������ĝut����������؁�������хе��ɐ����屔�ѕ�е�����鍕�ѕ�퉽ɑ�ȵѽ������ͽ�������l�u���؁��屔􉙽�еͥ��ĸ�ɕ����ɝ������ѽ����������l�u�𽑥���؁��屔􉙽�еͥ����ɕ�홽�еݕ�������������l�u�𽑥��𽑥��������������𽑥�������ɑ�ȵ���������ͽ����مȠ��݅ɹ�������(�����؁������ɥ��Ȉ��퍅�̹���������؁�����􉍅ɐ����屔􉉽ɑ�ȵ���������ͽ�����팹����Ё��屔􉙽�еݕ��������홽�еͥ����ɕ����ɝ������ѽ�����퍽����팹����팹��������팹�ѕ�̹���������؁��屔􉑥�����陱��텱�����ѕ��鍕�ѕ�흅�������������������홽�еͥ���ɕ�����������屔�ݥ�Ѡ���������������퉽ɑ�ȵɅ��������퉅���ɽչ��팹��홱��͡ɥ����������������𽑥��������������𽑥��������������𽑥��(�����퍅ɐ���~N,��n���{�R���"C�zp���ձ����؁������ɥ��̈���������̹���������؁�������хе��ɐ����屔����������������؁��屔􉙽�еͥ���ɕ�홽�еݕ��������������𽑥��𽑥��������������𽑥�����(����)��()����̹����չ�ѥ�����(������Ё�Ā�l��.W�/�����+��뢶�����޿��k�r��ϖ2X���Q���C��������w��'�:�"�z@����VÖ�㦂C��������+�j+����V#�"�z@�t�(������Ё�Ȁ�l��.W�/�/���뢶�����ʣ���r����C�Ⱌ������R�����j�����z,�������r4�$����М���V��۞&�������V<����М����7��Ϣ"�B#����������.W�2X�t�(������Ё����ɥ���m��蟖.W�/�����(���������������蟢޿��k���2X����������������Q��C��������Ա��������蟦/���뢶Ȝ��������������蟦r����C�Ⱌ����Ա��������蟦���:�����z,����������������$����М���Ա�����t�(��ɕ��ɸ��(�����؁������ɥ��Ȉ�(�������퍅ɐ���~�X�A��͔�ă�P�$���;���7��x��l��V#�:��� ���х����Ք�t�������屔􉙽�еͥ����ɕ�퍽����مȠ��ѕ�е͕�����ɝ������ѽ���������#�R��Z�>��nӚ:��R�Z�Ɨ���V#�:�"��o�"���C��/�j��Ӛf�������Ĺ�����б���������%ѕ����ıа����مȠ�������Ф������������������ɑ�ȵѽ������ͽ����مȠ�������Ф���(�������퍅ɐ���~���A��͔�ȃ�P�$��˦j;�'�R���l��V�Nk���.T���х���������t�������屔􉙽�еͥ����ɕ�퍽����مȠ��ѕ�е͕�����ɝ������ѽ�������������Zg�ҿ��7��3�C����f��T������ȹ�����б���������%ѕ����ıа����مȠ���������������������������ɑ�ȵѽ������ͽ����مȠ������������(����𽑥��(�����퍅ɐ���~N(�$����*o�"C��ꛚ���z,���ձ����х�����ѡ���������Ѡ�$����*l�Ѡ��Ѡ�A��͔�ă�"C����Ѡ��Ѡ�A��͔�ȃ�n���d�Ѡ������ѡ�����щ����������ɥ�乵������������ѐ���屔􉙽�еݕ�����������������ѐ��ѐ��؁�������ɽ�ɕ�̵��Ȉ���屔�ݥ�Ѡ������푥�����饹�����������ٕ�ѥ���������鵥�������؁�������ɽ�ɕ�̵��������屔�ݥ�Ѡ�������퉅���ɽչ��مȠ�������Ф��𽑥��𽑥�����������ѐ��ѐ��؁�������ɽ�ɕ�̵��Ȉ���屔�ݥ�Ѡ������푥�����饹�����������ٕ�ѥ���������鵥�������؁�������ɽ�ɕ�̵��������屔�ݥ�Ѡ�������퉅���ɽչ��مȠ�����������𽑥��𽑥�����������ѐ������������������щ�����х�������(����)��()����̹�����չ�ѥ�����(������Ё���������(�����	���������蜌�ф͈����ѕ���m���$�����r4����Ѓ����� ��х���l�$�������r4�t��蟒ⴝ����蟖V��۞&�������V<����М�х���l�$����V��؝t��蟒�8�����蟖�7��Ϣ��.W�2[�������х���l��ʇ�.d�t��蟒ⴝ�u��(�������������蜌͈�ɘ؜��ѕ���m���5=5<�����Z��A$���˚:���?���х���l��*��L����VӖB �t��蟦�`�����蟢ʣ��ۚr7�.g��?�&��W�N;����� ��х���l���������R��N�t��蟦�`�����蟢�+�j+�������U$�U`������ ��х���l��&7����t��蟒ⴝ�u��(������ˢ�3�ⴜ��蜍��������ѕ���m��蟞>��r'����Ǟn���x��х���l�����(�t��蟦�`������A5<�����S�zۚ�/��뢪4��х���l�����B�t��蟦�`��u��(�������˖�3�"@���蜌�����Ĝ��ѕ���m��蟖V�����#�V��n��Xȃ��3�"@��х���l���[�V��t��蟦�`�����蟦Z/�f󚢇��?��W��Ö�ǖF(��х���l��*��L�t��蟦�`��u��(����(������Ёɽ��̀�l(������蟖�ϖ>Þ���ʃ�ʳ��蜱�蟞����O�B��������l��"ÞV��Z�BG��랶X�������C����ꘜ���ޣ���Z�6S����u��(������蟖V�.g�ʃ�ʳ��蜱�蟖V�.g�������l��ʣ���.O��T�����+�j+�B#��p����R�/���f��T�u��(������蟞R��N�ʃ�ʳ��蜱�蟞R��N�������l��R��N�^7�rX�����?�&��W�N;����� ���Uc��[�V��u��(������蟚*��O�ʃ�ʳ��蜱�蟢���+�������l��zۚ�/����� �������ǚVӖB ��������Z/�f�u��(������蟞�/�ʃ�ʳ��蜱�蟞�/�������l��Ɨ������B���-A'�n��:��������/���2X�u��(�������$��ʃ�ʳ��蜱��'�rc�j(�����l�����z/�Z/�f𜰟�V�Nk��[�V�����f���'�R��u��(��t�(��ɕ��ɸ��(�����퍅ɐ���~N,��r/�v�����B���ձ����؁�����􉭅��������=����й���ɥ�̡�������������m��������t�����؁�����􉭅�����������؁�����􉭅���������ѥѱ�����������屔�ݥ�Ѡ���������������퉽ɑ�ȵɅ��������퉅���ɽչ��퍽��������������������������屔􉵅ɝ���������Ѽ홽�еͥ���ɕ�퍽����مȠ��ѕ�е��ѕ�����퍽���ѕ�̹����ѡ�������𽑥���퍽���ѕ�̹���������؁�����􉭅�������ɐ������팹������؁������х�̈��팹х�̹����ќ���������������х��х����Ք����ѝ�������������������������������х���팹�������`���х��ɕ��錹������ⴜ��х��啱��ܜ�х���ɕ������屔􉵅ɝ���������Ѽ���팹��������𽑥��𽑥��������������𽑥��������������𽑥�����(�����퍅ɐ���~>��A5<�����S�zۚ�/��뢪0���ձ����؁������ɥ��̈���屔􉝅����������ɽ��̹���������؁�������хе��ɐ����屔􉉽ɑ�ȵѽ������ͽ����مȠ�������Ф���؁��屔􉙽�еݕ��������홽�еͥ����ɕ�����ȹ��𽑥���؁��屔􉙽�еͥ���ɕ�퍽����مȠ�������Ф���ɝ������ѽ���������ȹ��𽑥����ȹ�̹���������؁��屔􉙽�еͥ����ɕ�퍽����مȠ��ѕ�е͕�������������������������𽑥��������������𽑥��������������𽑥�����(����)��()����̹ɽ�������չ�ѥ�����(������Ё���͕̀�l(�������ı�蟖~랒;��뢢��r|����ɥ�����̃�/�r ���蜌͈�ɘ؜�хͭ��l(������l��"C��/��ϖ>Ò�/����A5<��������O�B����t�l��>��r'����Ǣ"���Zg��3�VӞn���x�������+���t�l�������F��
++���*o��k������A5<�t�l���#��+�"����v�����ǖ>��R�����W��������/���t�l�5YC���r7�"�*��O�^7�r[��뢪4����*��O�Vܝt�l��B#��s�����Ӣ�W��â"�"�ޗ��뢪4����V�.g���t�l��ʣ��ۚr7�.g��?�&����z/����� ����R��N���t�l������Zg����z/����� �������+���uu��(�������ȱ��5Y@�������r|����ɥ���д؃�/�r ���蜌�����Ĝ�хͭ��l(������l���ϖ>��5Y@��Z/�f�V�.T����Z/�f�rc�j(�t�l������'�rÖ�ʣ�����{��Ӛf���+��h�����/���t�l�L���ĸ�f�̸זf�7����������R��N���t�l��~�r���/�Z��K�����+�K����擊K��7��ϦZ'�J�����Z/�f�rc�j(�t�l��VӖB#�^��r'��#��(�����v�����Ĝ������+���t�l��ʣ����"��+�j+����&7�>Ò�+��h���U$�U`�t�l��~랒8�A$��ѕ݅䃖��������zۚ�/�⬝uu��(�������̱�蟖��2[�NӖ�ךr|����ɥ���ܴ�ȃ�/�r ���蜍�������хͭ��l(������l���?�&��W�N;���2[�"���.W�2X����R��N���t�l��B#��s��+�j+�NӖ���.o�.|����V�.g���t�l�$��޿��k�r��ϖ2[��;�����'�rc�j(�t�l�$��.W�/�����+��뢶Ò�+��h���'�rc�j(�t�l���[���ʣ���.O��W��#�V��������.g���t�l��V�Nk�ⷖ>Þ�����j;��ג�+��h�������+���t�l�-A'�6Ϛf�����v���+��h�����/���t�l��C������2[�^s�6צ
+?�򼜰��*��O�Vܝuu��(�������б�蟞R�/���f��W�r|����ɥ����̴�Ѓ�/�r ���蜌�Ս�؜�хͭ��l(������l���[���ʣ��?����2[�.O��T�������.g���t�l����Zg�ⷖ>Ö�ߖ2[�"'��C�Ⱌ��'�rc�j(�t�l���w�j��r7�.g�R�/����;������V�.g���t�l��ڷ�����w��+�B#��s��ϖ>������/���t�l���o�'�>#�G�z7�����x����ʇ�.g���t�l���+��o�:����B#��s���������:������t�l���+�j+����B�M��L����������R��N���t�l����������v��"�*W����랶[��w�Nh���A5<�uu��(��t�(��ɕ��ɸ����͕̹����������؁�����􉍅ɐ����屔􉉽ɑ�ȵ���������ͽ������������(�����؁�����􉍅ɐ���Ȉ������������􉍅ɐ�ѥѱ���������������х�����屔􉉅���ɽչ����������퍽�����������A��͔����������������������������������������х��х����Ք���������ɥ���������𽑥��(�����؁������ɥ��Ȉ������х̹ͭ�����б���������%ѕ����ı�l�t��l�t����ф͈��������������𽑥��(��𽑥��������������)��()����̹�����չ�ѥ�����(������Ё���̀�l(������蟖�ϖ>Ö2[���Z��6���P����������Ա�蜔�����蟚���7�ʣ���V������Ա�������蟖�؝��(������蟚���7��+�j(��>㚦|���������������蟒������蟚�[�f�:�����иԱ�����蜔���(������蟞W異常率',c:4.8,t:2,u:'%',inv:1},{n:'每單毛利',c:22,t:35,u:'NTD'},
+    {n:'平台GMV',c:18,t:50,u:'M/月'},{n:'生態系收入占比',c:2,t:15,u:'%'},
   ];
-  const orderData = [{l:'1æ',v:12},{l:'3æ',v:15},{l:'5æ',v:21},{l:'7æ',v:27},{l:'9æ',v:34},{l:'12æ',v:48}];
-  const vehicleData = [{l:'1æ',v:12},{l:'3æ',v:15},{l:'5æ',v:18},{l:'7æ',v:22},{l:'9æ',v:27},{l:'12æ',v:39}];
+  const orderData = [{l:'1月',v:12},{l:'3月',v:15},{l:'5月',v:21},{l:'7月',v:27},{l:'9月',v:34},{l:'12月',v:48}];
+  const vehicleData = [{l:'1月',v:12},{l:'3月',v:15},{l:'5月',v:18},{l:'7月',v:22},{l:'9月',v:27},{l:'12月',v:39}];
 
   return `<div class="grid-4" style="margin-bottom:18px">${kpis.map(k=>{
     const pct = k.inv? Math.min(100,Math.round(k.t/k.c*100)):Math.min(100,Math.round(k.c/k.t*100));
     const clr = pct>=80?'var(--success)':pct>=50?'var(--warning)':'var(--danger)';
-    return `<div class="stat-card"><div class="stat-label">${k.n}</div><div class="stat-value" style="font-size:1.35rem;color:${clr}">${k.c}${k.u}</div><div style="font-size:.7rem;color:var(--text-muted);margin-bottom:6px">ç®æ¨ï¼${k.t}${k.u}</div><div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:${clr}"></div></div><div style="font-size:.68rem;color:var(--text-muted);margin-top:3px;text-align:right">${pct}%</div></div>`;
+    return `<div class="stat-card"><div class="stat-label">${k.n}</div><div class="stat-value" style="font-size:1.35rem;color:${clr}">${k.c}${k.u}</div><div style="font-size:.7rem;color:var(--text-muted);margin-bottom:6px">目標：${k.t}${k.u}</div><div class="progress-bar"><div class="progress-fill" style="width:${pct}%;background:${clr}"></div></div><div style="font-size:.68rem;color:var(--text-muted);margin-top:3px;text-align:right">${pct}%</div></div>`;
   }).join('')}</div>
   <div class="grid-2">
-    ${card('ð è¨å®æé·è¶¨å¢ï¼åå®/æï¼',null,makeBar(orderData,50,'var(--accent)'))}
-    ${card('ð æ´»èºè»è¼æ¸è¶¨å¢ï¼åå°ï¼',null,makeBar(vehicleData,42,'var(--success)'))}
+    ${card('📊 訂單成長趨勢（千單/月）',null,makeBar(orderData,50,'var(--accent)'))}
+    ${card('🚛 活躍車輛數趨勢（十台）',null,makeBar(vehicleData,42,'var(--success)'))}
   </div>`;
 };
 
@@ -458,25 +458,25 @@ pages.team = function(){
   const t = subTabs.team||0;
   let content = '';
   if(t===0){
-    const strats = [['ç­ç¥Aï¼ç´æ¥å°å¥','ç³»çµ±æçãæµç¨å®æ´ãå¯å¿«éä¸ç·','#3b82f6'],['ç­ç¥Bï¼åå°æ´å','æ°å¹³å°æ¿æ¥å¥å£ï¼æ¢æç³»çµ±èçä»»åï¼APIåå¯«','#10b981'],['ç­ç¥Cï¼éæ¸¡æ´å','åæåå°å¥éä½æç¨é¢¨éªï¼é·æåè©ä¼°å§å','#f59e0b']];
+    const strats = [['策略A：直接導入','系統成熟、流程完整、可快速上線','#3b82f6'],['策略B：前台整合','新平台承接入口，既有系統處理任務，API回寫','#10b981'],['策略C：過渡整合','初期先導入降低時程風險，長期再評估內化','#f59e0b']];
     content = `<div class="grid-3">${strats.map(s=>`<div class="card" style="border-top:4px solid ${s[2]}"><h4 style="font-weight:600;margin-bottom:7px">${s[0]}</h4><p style="font-size:.8rem;color:var(--text-sec)">${s[1]}</p></div>`).join('')}</div>`;
   }
   if(t===1){
-    const criteria = ['æ¯å¦çæ­£çè§£å¹³å°åç©æµåæ¨¡','æ¯å¦çè§£å¤éäº¤æè¦åãå±¥ç´ãçµç®èé¢¨æ§','æ¯å¦è½æ¥åå¯æææ¡æ ¸å¿è¦æ ¼èè³æä¸»æ¬','æ¯å¦å¯æä¾æ¨¡çµèæ¹æ³è«ï¼èéåªè³£æ´åé»ç','æ¯å¦é¡æåå MVP / è©¦é»åæ´å¤§','æ¯å¦æä¾ APIãæä»¶ãç¥è­ç§»è½èæ²»çæ©å¶'];
-    content = card('å¤é¨åä½å¤¥ä¼´è©ä¼°åå',null,criteria.map((c,i)=>checkItem(i+1,c,'','var(--warning)')).join(''));
+    const criteria = ['是否真正理解平台型物流商模','是否理解多邊交易規則、履約、結算與風控','是否能接受富昇掌握核心規格與資料主權','是否可提供模組與方法論，而非只賣整包黑盒','是否願意先做 MVP / 試點再擴大','是否提供 API、文件、知識移轉與治理機制'];
+    content = card('外部合作夥伴評估原則',null,criteria.map((c,i)=>checkItem(i+1,c,'','var(--warning)')).join(''));
   }
   if(t===2){
-    const items = ['åè½æçåº¦','å¯æ´åæ§','API è½å','ä¸»è³æçµæ§','å°å¸³èçµç®è½å','ç¶­éææ¬','æ¯å¦å½±é¿æªä¾å¹³å°æ´å¼µ','æ¯å¦å½¢ææ°çä¾æåç¶å®'];
-    content = card('å°è»/æ£§æ¿ç³»çµ±è©ä¼°æª¢è¦é ',null,`<div class="grid-2">${items.map(i=>`<div class="stat-card" style="padding:11px"><div style="display:flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent)"></span><span style="font-size:.84rem;font-weight:500">${i}</span></div></div>`).join('')}</div>`);
+    const items = ['功能成熟度','可整合性','API 能力','主資料結構','對帳與結算能力','維運成本','是否影響未來平台擴張','是否形成新的供應商綁定'];
+    content = card('專車/棧板系統評估檢視項',null,`<div class="grid-2">${items.map(i=>`<div class="stat-card" style="padding:11px"><div style="display:flex;align-items:center;gap:7px"><span style="width:7px;height:7px;border-radius:50%;background:var(--accent)"></span><span style="font-size:.84rem;font-weight:500">${i}</span></div></div>`).join('')}</div>`);
   }
-  return tabsHtml('team',['å°è»æ£§æ¿æ´åç­ç¥','åä½å¤¥ä¼´è©ä¼°','æ±ºç­åå'])+content;
+  return tabsHtml('team',['專車棧板整合策略','合作夥伴評估','決策原則'])+content;
 };
 
 // ====== RENDER ======
 function renderPage(id){
   const area = document.getElementById('contentArea');
   if(pages[id]) area.innerHTML = pages[id]();
-  else area.innerHTML = '<div class="card"><p>é é¢å»ºç½®ä¸­...</p></div>';
+  else area.innerHTML = '<div class="card"><p>頁面建置中...</p></div>';
 }
 
 // ====== INIT ======
